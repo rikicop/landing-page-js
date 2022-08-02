@@ -4,13 +4,13 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Psicólogo",
-  headline: "Experto en el estudio de las relaciones de conflicto y paz",
+  topLine: "Cursos Online",
+  headline: "Desde Cursos de programación",
   description:
-    "Estudio los orígenes y las causas profundas de la violencia y los conflictos, y así establecer estrategias para resolver conflictos interpersonales, comunitarios e internacionales de manera pacífica.",
+    "Aprenda programación con cursos gratuitos en línea de cursos universitarios reales de Harvard, MIT y más de las principales universidades del mundo. Obtenga las habilidades de codificación esenciales necesarias para el desarrollo web frontend y/o backend, aprendizaje automático, IOS, Android y mucho más.",
   buttonLabel: "CV",
   imgStart: "",
-  img: require("./assets/hero2.png"),
+  img: require("./assets/progressive_app.png"),
   alt: "Credit Card",
   start: "",
 };

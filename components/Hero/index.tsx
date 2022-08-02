@@ -77,7 +77,7 @@ function Hero({
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt={alt} width={580} height={460}  />
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>

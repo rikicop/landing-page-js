@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
-  --background-color: white;
-  --primary-color: #2e27ae;
+  --background-color: rgb(255, 255, 255);
+  /* Azul */
+  /* --primary-color: #2e27ae;  */
+  /* Amarillo */
+  --primary-color: #e8bd0f;
   --hr-color: #383838;
   --font-family: "Poppins", "Nunito";
 }
