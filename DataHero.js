@@ -4,7 +4,7 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Psicólogo clínico",
+  topLine: "Psicólogo clínico LO QUE SEAAA",
   headline: "Especialista en el estudio de las relaciones de conflicto y paz",
   description:
     "Estudio los orígenes y las causas profundas de la violencia y los conflictos, y así establecer estrategias para resolver conflictos interpersonales, comunitarios e internacionales de manera pacífica.",
