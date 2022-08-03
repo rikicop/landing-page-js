@@ -1,10 +1,10 @@
 {
-  "name": "sanityleonardo",
+  "name": "sanitydukleen",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Leonardo Luna <sanityleonardo@gmail.com>",
+  "author": "Ricardo Otalora <ruperto1@protonmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
