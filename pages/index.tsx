@@ -12,13 +12,19 @@ import { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 import CardList from "../components/CardList";
 import Navbar from "components/Navbar";
+import CursoList from "components/CursoList";
 
-export default function Home({ posts: posts }: any) {
+export default function Home({ posts: posts, cursos: cursos }: any) {
   const [mappedPosts, setMappedPosts] = useState([]);
+  const [mappedCursos, setMappedCursos] = useState([]);
   useEffect(() => {
-    if (posts.length) {
+    if (posts.length && cursos.length) {
       const imgBuilder = imageUrlBuilder({
-        projectId: "zvusid2u",
+        projectId: "rfzuszbb",
+        dataset: "production",
+      });
+      const imgBuilderc = imageUrlBuilder({
+        projectId: "rfzuszbb",
         dataset: "production",
       });
       setMappedPosts(
@@ -29,10 +35,20 @@ export default function Home({ posts: posts }: any) {
           };
         })
       );
+      setMappedCursos(
+        cursos.map((c: any) => {
+          return {
+            ...c,
+            mainImage: imgBuilderc.image(c.mainImage).width(500).height(250),
+          };
+        }
+        )
+      );
     } else {
       setMappedPosts([]);
+      setMappedCursos([]);
     }
-  }, [posts]);
+  }, [posts, cursos]);
   return (
     <>
       <WhatsAppButton />
@@ -48,6 +64,12 @@ export default function Home({ posts: posts }: any) {
       ) : (
         <p>No posts found</p>
       )}
+       {/* Cursos */}
+      {mappedCursos.length ? (
+        <CursoList data={mappedCursos} title="Curso" />
+      ) : (
+        <p>No Courses found</p>
+      )}
       {/* <Portfolio />
       <Testimonials />
       <Products />
@@ -59,18 +81,23 @@ export default function Home({ posts: posts }: any) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const query = encodeURIComponent('*[_type == "post"]');
+  const queryc = encodeURIComponent('*[_type == "curso"]');
   const url = `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v1/data/query/production?query=${query}`;
+  const urlc = `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v1/data/query/production?query=${queryc}`;
   const result = await fetch(url).then((res) => res.json());
-  if (!result.result || !result.result.length) {
+  const resultc = await fetch(urlc).then((res) => res.json());
+  if (!result.result || !result.result.length || !resultc.result || !resultc.result.length) {
     return {
       props: {
         posts: [],
+        cursos: [],
       },
     };
   } else {
     return {
       props: {
         posts: result.result,
+        cursos: resultc.result,
       },
     };
   }
