@@ -1,15 +1,16 @@
-import WhatsAppButton from "../components/WhatsAppButton";
-import Hero from "../components/Hero";
-// About from "../components/About";
-import Services from "../components/Services";
-import Acerca from "../components/Acerca";
-
-import { homeObjOne, homeObjFour } from "../DataHero";
-//import { articles } from "../data";
-
+// MODULES
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
+
+//DATA STATIC
+import { homeObjOne, homeObjFour } from "../DataHero";
+
+// COMPONENTS
+import WhatsAppButton from "../components/WhatsAppButton";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import Acerca from "../components/Acerca";
 import CardList from "../components/CardList";
 import Navbar from "components/Navbar";
 import CursoList from "components/CursoList";
@@ -54,8 +55,6 @@ export default function Home({ posts: posts, cursos: cursos }: any) {
       <WhatsAppButton />
       <Navbar />
       <Hero {...homeObjOne} />
-      {/* Problemas Contenido Topline muy largo */}
-      {/* <About {...homeObjTwo} />  */}
       <Acerca {...homeObjFour} />
       <Services />
       {/* Blogs */}
@@ -70,11 +69,6 @@ export default function Home({ posts: posts, cursos: cursos }: any) {
       ) : (
         <p>No Courses found</p>
       )}
-      {/* <Portfolio />
-      <Testimonials />
-      <Products />
-      <Newsletter />
-      <Blogs /> */}
     </>
   );
 }
