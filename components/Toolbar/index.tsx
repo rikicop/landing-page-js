@@ -130,7 +130,7 @@ const Navbar = () => {
       </div>
       <div className={`links ${navState ? "show" : "hide"}`}>
         <ul>
-          <li>
+          
             <Link href="https://www.instagram.com/">
               <li>
                 <FaInstagram
@@ -141,8 +141,8 @@ const Navbar = () => {
                 Instagram
               </li>
             </Link>
-          </li>
-          <li>
+          
+        
             <Link href="https://www.facebook.com">
               <li>
                 <FaFacebook
@@ -153,8 +153,8 @@ const Navbar = () => {
                 Facebook
               </li>
             </Link>
-          </li>
-          <li>
+          
+          
             <Link href="https://www.twitter.com/">
               <li>
                 <FaTwitter
@@ -165,7 +165,7 @@ const Navbar = () => {
                 Twitter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </li>
             </Link>
-          </li>
+          
         </ul>
       </div>
     </Nav>

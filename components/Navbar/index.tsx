@@ -1,22 +1,22 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/heroProfile.png";
+import logo from "../../assets/logo.svg";
 import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { Link as LinkScroll } from "react-scroll";
 
 const Nav = styled.nav`
-  height: 14vh;
+  height: 5vh;
   display: flex;
   justify-content: space-between;
   margin: 1rem 1rem 1rem 1rem;
   .brand {
     display: flex;
     align-items: center;
-    .logo {
-      border: 2px solid lightgray;
-      border-radius: 500px;
-    }
+   /*  .logo {
+      border: 1px solid lightgray;
+      border-radius: 50px;
+    } */
     .toggle {
       display: none;
     }
@@ -83,7 +83,7 @@ const Nav = styled.nav`
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
-    height: 13vh;
+    height: 5vh;
     position: relative;
     margin: 0;
     z-index: 1;
@@ -141,7 +141,7 @@ const Navbar = () => {
             width={60}
           />
         </div>
-        <h3 style={{ marginLeft: "10px" }}>Dr. Leonardo Luna</h3>
+        <h3 style={{ marginLeft: "10px", fontSize:35 }}>DUKLEEN</h3>
         <div className="toggle">
           {navState ? (
             <BsToggleOn
