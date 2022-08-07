@@ -5,6 +5,7 @@
 import { useRouter } from "next/router";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+const Slide = require("react-reveal/Slide");
 
 import {
   Container,
@@ -56,13 +57,16 @@ function Acerca({
   return (
     <>
       <InfoSec lightBg={lightBg}>
+         
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
+                <Slide bottom cascade>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+               
 
                 <Button
                   big
@@ -95,15 +99,21 @@ function Acerca({
                     </Link>
                   </ul>
                 </Social>
+                </Slide>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
+              
               <ImgWrapper start={start}>
+                <Slide bottom cascade>
                 <Img src={img} alt={alt} />
+                </Slide>
               </ImgWrapper>
+              
             </InfoColumn>
           </InfoRow>
         </Container>
+       
       </InfoSec>
     </>
   );

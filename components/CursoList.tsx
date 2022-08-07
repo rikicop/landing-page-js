@@ -2,6 +2,8 @@ import { IndexPageProps } from "../Interfaces";
 //import styles from "../styles/Card.module.css";
 import styled from "styled-components";
 import CursoItem from "./CursoItem";
+const Slide = require("react-reveal/Slide");
+
 
 const Wrapper = styled.div`
   display: grid;
@@ -26,12 +28,14 @@ const Title = styled.h1`
 const CursoList = ({ data, title }: IndexPageProps) => {
   return (
     <section id="blog">
+      <Slide bottom cascade>
       <Title>{title}</Title>
       <Wrapper>
         {data.map((article, index) => (
           <CursoItem data={article} key={index} />
         ))}
       </Wrapper>
+      </Slide>
     </section>
   );
 };

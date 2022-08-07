@@ -5,6 +5,8 @@ import logo from "../../assets/logo.svg";
 import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { Link as LinkScroll } from "react-scroll";
 
+import {Fade as Efecto} from "react-reveal";
+
 const Nav = styled.nav`
   height: 5vh;
   display: flex;
@@ -13,10 +15,7 @@ const Nav = styled.nav`
   .brand {
     display: flex;
     align-items: center;
-   /*  .logo {
-      border: 1px solid lightgray;
-      border-radius: 50px;
-    } */
+  
     .toggle {
       display: none;
     }
@@ -128,7 +127,7 @@ const Nav = styled.nav`
 `;
 
 const Navbar = () => {
-  const [navState, setNavState] = useState<boolean>(false);
+  const [navState, setNavState] = useState(false);
   return (
     <Nav>
       <div className="brand">
@@ -141,7 +140,7 @@ const Navbar = () => {
             width={60}
           />
         </div>
-        <h3 style={{ marginLeft: "10px", fontSize:35 }}>DUKLEEN</h3>
+        <h3 style={{ marginLeft: "10px", fontSize:35 }}><Efecto left cascade duration={3000}>DUKLEEN</Efecto></h3>
         <div className="toggle">
           {navState ? (
             <BsToggleOn
@@ -164,7 +163,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li>Principal</li>
+            <li><Efecto left cascade>Principal</Efecto></li>
           </LinkScroll>
           <LinkScroll
             to="blog"
@@ -172,7 +171,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li>Blog</li>
+            <li><Efecto left cascade duration={2000}>Blog</Efecto></li>
           </LinkScroll>
 
           <LinkScroll
@@ -181,7 +180,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li>Servicios</li>
+            <li><Efecto left cascade>Servicios</Efecto></li>
           </LinkScroll>
 
           <LinkScroll
@@ -190,7 +189,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li>Contacto</li>
+            <li><Efecto left cascade>Contacto</Efecto></li>
           </LinkScroll>
         </ul>
       </div>

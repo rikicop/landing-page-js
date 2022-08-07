@@ -4,7 +4,7 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Cursos Online",
+  topLine: "Ahora!!",
   headline: "Desde Cursos de programación",
   description:
     "Aprenda programación con cursos gratuitos en línea de cursos universitarios reales de Harvard, MIT y más de las principales universidades del mundo. Obtenga las habilidades de codificación esenciales necesarias para el desarrollo web frontend y/o backend, aprendizaje automático, IOS, Android y mucho más.",

@@ -2,6 +2,7 @@ import { ArticleItemProps } from "../../Interfaces";
 import { useRouter } from "next/router";
 import { CardContainer } from "./CardItemElements";
 
+
 const CardItem = ({ data }: ArticleItemProps) => {
   const router = useRouter();
   return (

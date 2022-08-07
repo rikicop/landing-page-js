@@ -6,6 +6,9 @@ import Image from "next/image";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/router";
 
+const Slide = require("react-reveal/Slide");
+
+
 export default function Footer() {
   const router = useRouter();
   const links = [
@@ -16,6 +19,7 @@ export default function Footer() {
   ];
   return (
     <Footr id="footr">
+      <Slide cascade bottom>
       <div className="upper__footer">
         <div className="brand">
           <Image src={logo} alt="Footer Logo" height={60} width={70} />
@@ -61,6 +65,7 @@ export default function Footer() {
           </li>
         </ul>
       </div>
+      </Slide>
     </Footr>
   );
 }

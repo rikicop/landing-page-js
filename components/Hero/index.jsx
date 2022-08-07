@@ -1,8 +1,10 @@
 //import Image from "next/image";
 //import React from "react";
-//import { Typewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
+//{/* <Typewriter words={['Programa Ya!!','Incríbete',`${topLine}`]}/> */}
 //import { Section } from "./HeroElements";
 import { useRouter } from "next/router";
+import {Fade as Efecto} from "react-reveal";
 
 import {
   Container,
@@ -18,7 +20,7 @@ import {
   Button,
 } from "./HeroElements";
 
-interface HeroProps {
+/* interface HeroProps {
   primary?: boolean;
   lightBg?: boolean;
   topLine?: string;
@@ -32,7 +34,7 @@ interface HeroProps {
   alt?: string;
   imgStart?: any;
   start?: any;
-}
+} */
 
 function Hero({
   primary,
@@ -48,7 +50,7 @@ function Hero({
   alt,
   imgStart,
   start,
-}: HeroProps) {
+}) {
   const router = useRouter();
   return (
     <>
@@ -56,11 +58,12 @@ function Hero({
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
+             
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+             
+                <TopLine lightTopLine={lightTopLine}>Aprende a programar  <Typewriter words={[`${topLine}`,'en Python','JavaScript','']}/></TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-
+                <Subtitle lightTextDesc={lightTextDesc}><Efecto bottom cascade>{description}</Efecto></Subtitle>
                 <Button
                   big
                   fontBig
@@ -73,12 +76,15 @@ function Hero({
                 >
                   {buttonLabel}
                 </Button>
-              </TextWrapper>
+              
+              </TextWrapper>   
             </InfoColumn>
             <InfoColumn>
-              <ImgWrapper start={start}>
-                <Img src={img} alt={alt} width={580} height={460}  />
-              </ImgWrapper>
+             
+                <ImgWrapper start={start}>     
+                    <Efecto bottom cascade ><Img src={img} alt={alt} width={580} height={460}  /></Efecto>
+                </ImgWrapper>
+              
             </InfoColumn>
           </InfoRow>
         </Container>

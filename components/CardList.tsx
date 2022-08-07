@@ -3,6 +3,8 @@ import { IndexPageProps } from "../Interfaces";
 import CardItem from "../components/CardItem";
 import styled from "styled-components";
 
+const Slide = require("react-reveal/Slide");
+
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
@@ -26,12 +28,14 @@ const Title = styled.h1`
 const CardList = ({ data, title }: IndexPageProps) => {
   return (
     <section id="blog">
+      <Slide cascade bottom>
       <Title>{title}</Title>
       <Wrapper>
         {data.map((article, index) => (
-          <CardItem data={article} key={index} />
+          <CardItem data={article} key={index} />  
         ))}
       </Wrapper>
+       </Slide>
     </section>
   );
 };
