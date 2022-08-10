@@ -184,7 +184,7 @@ const Navbar = () => {
           </LinkScroll>
 
           <LinkScroll
-            to="footr"
+            to="footer"
             smooth={true}
             duration={100}
             style={{ cursor: "pointer" }}
