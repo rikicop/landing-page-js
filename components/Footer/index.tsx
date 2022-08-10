@@ -34,13 +34,13 @@ export default function Footer() {
       <div className="contact container">
         <div className="title"><h3>Contact us</h3></div>
         <p> +34 654 765 456</p>
-        <p> dukleer@gmail.com </p>
-        <p> @dukleer </p>
+        <p> dukleen@gmail.com </p>
+        <p> @dukleen </p>
         <p> 412 Street, Gorund Floor, Ciudad Ojeda </p>
       </div>
     </Section>
     <LowerFooter className="lower__footer">
-      <h2>© 2020 Dukleer. All rights reserved <span>Educación en Línea</span></h2>
+      <h2>© 2020 Dukleen. All rights reserved <span>Educación en Línea</span></h2>
     </LowerFooter>
    </div>
   );
