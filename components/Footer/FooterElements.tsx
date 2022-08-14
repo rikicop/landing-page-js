@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 export const Section = styled.footer`
   margin: 0;
-  background: linear-gradient(to right,#FFDD00,#f5c474); 
-  color: white;
-  display: grid;
+  background: #000000; 
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 10vw;
   padding: 4vw;
+  margin-top: 2vw;
+  text-align: justify;
   p {
     font-size: 1.1rem;
     line-height: 2rem;
@@ -17,15 +21,14 @@ export const Section = styled.footer`
     display: flex;
     list-style-type: none;
     gap: 4vw;
-    margin-top: 2vw;
     li {
       padding: 0.8rem;
-      border-radius: 2rem;
-      background-color: white;
+      border-radius: 1.2rem;
+      background-color: #000000;
       transition: 0.3s ease-in-out;
       cursor: pointer;
       &:hover {
-        background-color: black;
+        background-color: #fff;
         svg {
           transform: scale(1.2);
         }
@@ -34,26 +37,16 @@ export const Section = styled.footer`
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #FBB034;
+        color: #fbaa18;
         font-size: 1.6rem;
-        transition: 0.3s ease-in-out;
+        transition: 0.2s ease-in-out;
         &:hover {
+          color: #000000;
         }
       }
     }
   }
-  .img_logo {
-    
-    width: 10vw;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    h3 {
-      font-size: 2rem;
-    }
-  }
+  
   @media screen and (min-width: 260px) and (max-width: 1080px) {
     grid-template-columns: 1fr;
     .container {
@@ -68,21 +61,46 @@ export const Section = styled.footer`
 export const LowerFooter = styled.div`
 
   margin: 0;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #fbaa18;
+  color: #000000;
   padding: 1rem;
   h2 {
     span {
-      color: #FBB034;
+      color: #e67824;
       text-transform: uppercase;
     }
   }
-  @media screen and (min-width: 260px) and (max-width: 450px) {
-    h2 {
-      span {
-        display: block;
-      }
-    }
+`;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`;
+
+export const BrandContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const ContactContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+`;
+
+export const Title = styled.div`
+  h2 {
+      color: #fbaa18;
+      text-transform: uppercase;
+      padding: 1rem;
   }
-`
+`;
