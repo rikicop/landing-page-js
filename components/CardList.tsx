@@ -1,5 +1,4 @@
 import { IndexPageProps } from "../Interfaces";
-//import styles from "../styles/Card.module.css";
 import CardItem from "../components/CardItem";
 import styled from "styled-components";
 
