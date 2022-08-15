@@ -29,7 +29,6 @@ export const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
     width: auto;
-    margin-right: 10px;
 
     ul {
       display: flex;
@@ -135,7 +134,7 @@ export const Nav = styled.nav`
       top: -600px;
     }
   }
-
+  
   @media screen and (min-width: 2px) and (max-width: 320px) {
     flex-direction: column;
     justify-content: center center;
@@ -144,6 +143,9 @@ export const Nav = styled.nav`
       display: none;
       font-size: 5px;
 
+    }
+    .links {
+      display: none;
     }
   }
   
