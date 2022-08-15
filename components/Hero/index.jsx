@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 //{/* <Typewriter words={['Programa Ya!!','Incríbete',`${topLine}`]}/> */}
 //import { Section } from "./HeroElements";
 import { useRouter } from "next/router";
-import {Fade as Efecto} from "react-reveal";
+import { Fade as Efecto } from "react-reveal";
 
 import {
   Container,
@@ -58,12 +58,12 @@ function Hero({
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
-             
+
               <TextWrapper>
-             
-                <TopLine lightTopLine={lightTopLine}>Aprende a programar  <Typewriter words={[`${topLine}`,'en Python','JavaScript','']}/></TopLine>
+
+                <TopLine lightTopLine={lightTopLine}>Aprende a programar  <Typewriter words={[`${topLine}`, 'en Python', 'JavaScript', '']} /></TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}><Efecto bottom cascade>{description}</Efecto></Subtitle>
+                <Subtitle lightTextDesc={lightTextDesc} /><Efecto bottom cascade>{description}</Efecto>
                 <Button
                   big
                   fontBig
@@ -76,15 +76,15 @@ function Hero({
                 >
                   {buttonLabel}
                 </Button>
-              
-              </TextWrapper>   
+
+              </TextWrapper>
             </InfoColumn>
             <InfoColumn>
-             
-                <ImgWrapper start={start}>     
-                    <Efecto bottom cascade ><Img src={img} alt={alt} width={580} height={460}  /></Efecto>
-                </ImgWrapper>
-              
+
+              <ImgWrapper start={start}>
+                <Efecto bottom cascade ><Img src={img} alt={alt} width={580} height={460} /></Efecto>
+              </ImgWrapper>
+
             </InfoColumn>
           </InfoRow>
         </Container>
