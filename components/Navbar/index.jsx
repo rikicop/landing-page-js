@@ -5,7 +5,7 @@ import logo from "../../assets/logo.svg";
 import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { Link as LinkScroll } from "react-scroll";
 
-import {Fade as Efecto} from "react-reveal";
+import { Fade as Efecto } from "react-reveal";
 
 const Nav = styled.nav`
   height: 5vh;
@@ -140,7 +140,7 @@ const Navbar = () => {
             width={60}
           />
         </div>
-        <h3 style={{ marginLeft: "10px", fontSize:35 }}><Efecto left cascade duration={3000}>DUKLEEN</Efecto></h3>
+        <h3 style={{ marginLeft: "10px", fontSize: 35 }}><Efecto left cascade duration={3000}>DUKLEEN</Efecto></h3>
         <div className="toggle">
           {navState ? (
             <BsToggleOn
@@ -166,12 +166,12 @@ const Navbar = () => {
             <li><Efecto left cascade>Principal</Efecto></li>
           </LinkScroll>
           <LinkScroll
-            to="blog"
+            to="cursos"
             smooth={true}
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade duration={2000}>Blog</Efecto></li>
+            <li><Efecto left cascade duration={2000}>Cursos</Efecto></li>
           </LinkScroll>
 
           <LinkScroll

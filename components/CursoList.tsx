@@ -27,7 +27,7 @@ const Title = styled.h1`
 
 const CursoList = ({ data, title }: IndexPageProps) => {
   return (
-    <section id="blog">
+    <section id="cursos">
       <Slide bottom cascade>
       <Title>{title}</Title>
       <Wrapper>
