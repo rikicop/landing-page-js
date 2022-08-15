@@ -5,7 +5,7 @@ import logo from "../../assets/Logo nuevo 1.png";
 import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { Link as LinkScroll } from "react-scroll";
 
-import {Fade as Efecto} from "react-reveal";
+import { Fade as Efecto } from "react-reveal";
 
 // Styled Components
 import { Nav, LinksContainerNav, TextLogoNav, LogoImg } from "../Navbar/NavbarElements.jsx"
@@ -54,12 +54,12 @@ const Navbar = () => {
             <li><Efecto left cascade>Principal</Efecto></li>
           </LinkScroll>
           <LinkScroll
-            to="blog"
+            to="cursos"
             smooth={true}
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade duration={2000}>Blog</Efecto></li>
+            <li><Efecto left cascade duration={2000}>Cursos</Efecto></li>
           </LinkScroll>
 
           <LinkScroll
