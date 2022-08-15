@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   height: 5vh;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 35px;
@@ -84,6 +84,8 @@ export const Nav = styled.nav`
     }
   }
   @media screen and (min-width: 321px) and (max-width: 1080px) {
+    align-items: center;
+    justify-content: center;
     height: 20px;
     position: relative;
     margin: 0;
@@ -137,7 +139,8 @@ export const Nav = styled.nav`
   
   @media screen and (min-width: 2px) and (max-width: 320px) {
     flex-direction: column;
-    justify-content: center center;
+    justify-content: center;
+    align-items: center;
     
     li {
       display: none;

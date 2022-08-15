@@ -20,8 +20,8 @@ const Navbar = () => {
             src={logo}
             alt="Dukleen"
             className="brandLogo"
-            height={50}
-            width={50}
+            height={40}
+            width={40}
           />
         </LogoImg>
 
