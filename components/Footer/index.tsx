@@ -1,7 +1,11 @@
 import React from "react";
 import logo_text from "../../assets/Recurso 7@4x.png";
 import Image from "next/image";
+
+// icons 
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+
+// styled components
 import { LowerFooter, Section, ImgContainer, BrandContainer, ContactContainer, Title } from "./FooterElements";
 
 export default function Footer() {
