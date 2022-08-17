@@ -1,120 +1,15 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect,createContext, useContext } from "react";
+import { useState, useEffect } from "react";
 //import BlockContent from "@sanity/block-content-to-react";
 import Toolbar from "../../components/Toolbar";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { PostType } from "../../typings";
-
-//SingleCurso Component
-import styled from "styled-components";
+//SingleCurso Components
 import SingleCurso from "./SingleCurso";
 import { homeObjFour } from "./DataHero";
+import { CommentConfirmed, ErrorContainer, Form, Input, Label, Main, Rule, Span, Submit, Textarea } from "./SlugElements";
+import { MyGlobalContext } from "./slugContext";
 
-//
-
-
-
-const Main = styled.div`
-  margin: auto;
-  //this top margin is just for landscape
-  margin-top: 1rem;
-  width: 750px;
-  max-width: calc(100vw - 50px);
-  //media for large screens
-  @media screen and (min-width: 1280px) {
-    width: 80%;
-  }
-`;
-
-const Rule = styled.hr`
-  margin: 5px auto;
-  border: 1px solid var(--primary-color);
-  @media screen and (max-width: 768px) {
-    max-width: 90%;
-  }
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin: 10px 2px;
-`;
-
-const Label = styled.label`
-  display: block;
-  margin-bottom: 5px;
-`;
-
-const Span = styled.span`
-  color: #585858;
-  font-weight: bold;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 2px solid lightgray;
-  border-radius: 4px;
-  &:focus {
-    outline: none;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 10px #719ece;
-  }
-`;
-
-const Textarea = styled.textarea`
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 2px solid lightgray;
-  border-radius: 4px;
-  display: inline-block;
-  width: 100%;
-  font-size: 15px;
-  &:focus {
-    outline: none;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 10px #719ece;
-  }
-`;
-
-const ErrorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  color: red;
-  font-weight: bold;
-`;
-
-const Submit = styled.button`
-  background-color: var(--primary-color);
-  font-size: medium;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin: 10px 0;
-  cursor: pointer;
-  &:hover {
-    background-color: #719ece;
-  }
-`;
-
-const CommentConfirmed = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  margin: 10px auto;
-  border: 1px solid blue;
-  background-color: blue;
-  color: white;
-  h3 {
-    font-size: medium;
-    font-weight: bold;
-  }
-`;
 
 interface IFormInput {
   _id: string;
@@ -127,17 +22,6 @@ interface Props {
   post: PostType;
 }
 
-export type GlobalContent = {
-  checkout: any;
-  setCheckout: (c:any) => void;
-}
-
-export const MyGlobalContext = createContext<GlobalContent>({
-checkout: 'Hello World', // set a default value
-setCheckout: () => {},
-})
-
-export const useGlobalContext = () => useContext(MyGlobalContext)
 
 function Curso({ post }: Props) {
   const [imageUrl, setImageUrl] = useState("");
@@ -145,8 +29,6 @@ function Curso({ post }: Props) {
   const [submitted, setSubmitted] = useState(false);
   console.log("POST: ", post);
   console.log("CHECKOUT in Slug: ", checkout);
-
-
 
   const {
     register,
@@ -193,9 +75,9 @@ function Curso({ post }: Props) {
   return (
     <div>
       <Toolbar />
-      {/* Aqui estoy pasando tanto el objeto estatico como el de sanity */}
       <MyGlobalContext.Provider value={{checkout,setCheckout}}>
-        <SingleCurso {...homeObjFour} {...objSanity} /* startCheckout={setCheckout} */ />
+        {/* Aqui estoy pasando tanto el objeto estatico como el de sanity */}
+        <SingleCurso {...homeObjFour} {...objSanity}  />
       </MyGlobalContext.Provider>
       <Main>
         <Rule />
@@ -243,8 +125,7 @@ function Curso({ post }: Props) {
                 placeholder="Información que desea enviar"
                 rows={8}
               />
-            </Label>
-            
+            </Label>           
             <ErrorContainer>
               {errors.name && (
                 <span className="text-red-500">

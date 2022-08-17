@@ -2,7 +2,6 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 //Context API
 
-import { useGlobalContext } from "./[slug]";
 
 import {
   Container,
@@ -18,6 +17,7 @@ import {
   Button,
   Social,
 } from "./SingleCElements";
+import { useGlobalContext } from "./slugContext";
 
 
 interface CursoProps {
