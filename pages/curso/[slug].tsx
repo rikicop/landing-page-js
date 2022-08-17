@@ -1,11 +1,18 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
-import BlockContent from "@sanity/block-content-to-react";
+import { useState, useEffect,createContext, useContext } from "react";
+//import BlockContent from "@sanity/block-content-to-react";
 import Toolbar from "../../components/Toolbar";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { PostType } from "../../typings";
 
+//SingleCurso Component
 import styled from "styled-components";
+import SingleCurso from "./SingleCurso";
+import { homeObjFour } from "./DataHero";
+
+//
+
+
 
 const Main = styled.div`
   margin: auto;
@@ -16,36 +23,6 @@ const Main = styled.div`
   //media for large screens
   @media screen and (min-width: 1280px) {
     width: 80%;
-  }
-`;
-const Title = styled.h1`
-  font-size: 2rem;
-  padding-bottom: 5px;
-  @media screen and (min-width: 1280px) {
-    font-size: 3rem;
-  }
-`;
-
-const MainImage = styled.img`
-  width: 100%;
-`;
-
-const Body = styled.div`
-  p {
-    font-size: 24px;
-    /* text-indent: 10px; */
-    line-height: 45px;
-    letter-spacing: 1.5px;
-    text-align: justify;
-  }
-  //media for mobile
-  @media (max-width: 768px) {
-    p {
-      font-size: 18px;
-      text-indent: 0;
-      line-height: 25px;
-      text-align: left;
-    }
   }
 `;
 
@@ -139,31 +116,6 @@ const CommentConfirmed = styled.div`
   }
 `;
 
-/* const CommentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 10px;
-  margin: 10px auto;
-  box-shadow: 3px 3px 2px -2px var(--primary-color);
-  color: black;
-  h3 {
-    font-size: medium;
-    font-weight: bold;
-  }
-  hr {
-    margin: 5px auto;
-    border: 2px solid lightgray;
-  }
-  p {
-    span {
-      color: var(--primary-color);
-      text-transform: capitalize;
-      margin-right: 5px;
-    }
-  }
-`; */
-
 interface IFormInput {
   _id: string;
   name: string;
@@ -175,10 +127,26 @@ interface Props {
   post: PostType;
 }
 
+export type GlobalContent = {
+  checkout: any;
+  setCheckout: (c:any) => void;
+}
+
+export const MyGlobalContext = createContext<GlobalContent>({
+checkout: 'Hello World', // set a default value
+setCheckout: () => {},
+})
+
+export const useGlobalContext = () => useContext(MyGlobalContext)
+
 function Curso({ post }: Props) {
   const [imageUrl, setImageUrl] = useState("");
+  const [checkout, setCheckout] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState(false);
   console.log("POST: ", post);
+  console.log("CHECKOUT in Slug: ", checkout);
+
+
 
   const {
     register,
@@ -186,6 +154,7 @@ function Curso({ post }: Props) {
     formState: { errors, isSubmitting },
   } = useForm<IFormInput>();  
 
+  //Form Submit Handler
    const onSubmit: SubmitHandler<IFormInput> = (data) => {
     return new Promise((resolve: any) => {
       setTimeout(() => {
@@ -205,7 +174,9 @@ function Curso({ post }: Props) {
       }, 1700);
     });
   }; 
-
+  
+  //En este useEffect se obtiene la url de la imagen
+  //para pasarla al useState imageUrl
   useEffect(() => {
     const imgBuilder: any = imageUrlBuilder({
       projectId: "rfzuszbb",
@@ -213,23 +184,30 @@ function Curso({ post }: Props) {
     });
     setImageUrl(imgBuilder.image(post.mainImage));
   }, [post.mainImage]);
+
+  //Sanity Object
+  const objSanity = {
+      topLine: post.title,
+      img: imageUrl,
+  };
   return (
     <div>
       <Toolbar />
+      {/* Aqui estoy pasando tanto el objeto estatico como el de sanity */}
+      <MyGlobalContext.Provider value={{checkout,setCheckout}}>
+        <SingleCurso {...homeObjFour} {...objSanity} /* startCheckout={setCheckout} */ />
+      </MyGlobalContext.Provider>
       <Main>
-        <Title>{post.title}</Title>
-        {imageUrl && <MainImage src={imageUrl} />}
-        <Body>
-          <BlockContent blocks={post.body} />
-        </Body>
         <Rule />
        {isSubmitting && <h1>Cargando...</h1>} 
-         {submitted ? (
+         {submitted && 
           <CommentConfirmed>
             <h2>Gracias por suminstrar tu información!</h2>
             <p>Ya se envió al administrador</p>
           </CommentConfirmed>
-        ) : (
+          } 
+
+          { checkout &&
           <Form onSubmit={handleSubmit(onSubmit)}>
             <h3 style={{ color: "blue" }}>Bienvenido</h3>
             <h4 style={{ color: "gray", marginTop: "2px" }}>
@@ -285,21 +263,7 @@ function Curso({ post }: Props) {
               )}
             </ErrorContainer>
             <Submit type="submit"> Ingresar </Submit>
-          </Form>
-        )} 
-        {/* Comments */}
-        {/* <CommentContainer>
-          <h3>Comentarios</h3>
-          <hr style={{ width: "90%" }} />
-          {post.comments.map((comment) => (
-            <div key={comment._id}>
-              <p style={{ margin: "1rem auto" }}>
-                <span>{comment.name}:</span>
-                {comment.comment}
-              </p>
-            </div>
-          ))}
-        </CommentContainer> */}
+          </Form>}
       </Main>
     </div>
   );
