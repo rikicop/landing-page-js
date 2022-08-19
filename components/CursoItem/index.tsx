@@ -5,7 +5,7 @@ import { CardContainer } from "./CursoItemElements";
 const CursoItem = ({ data }: ArticleItemProps) => {
   const router = useRouter();
   return (
-    <CardContainer onClick={() => router.push(`/curso/${data.slug.current}`)}>
+    <CardContainer onClick={() => router.push(`/curso/Slug/${data.slug.current}`)}>
       <div className="card-head">
         <div className="image-wrapper">
           <img src={data.mainImage} alt="curso" />

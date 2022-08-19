@@ -1,14 +1,15 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 //import BlockContent from "@sanity/block-content-to-react";
-import Toolbar from "../../components/Toolbar";
+import Toolbar from "../../../components/Toolbar";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { PostType } from "../../typings";
+import { PostType } from "../../../typings";
 //SingleCurso Components
-import SingleCurso from "./SingleCurso";
-import { homeObjFour } from "./DataHero";
+//import SingleCurso from "../SingleCurso";
+import { homeObjFour } from "../DataCurso";
 import { CommentConfirmed, ErrorContainer, Form, Input, Label, Main, Rule, Span, Submit, Textarea } from "./SlugElements";
-import { MyGlobalContext } from "./slugContext";
+import { MyGlobalContext } from "../slugContext";
+import Resp from "../Resp";
 
 
 interface IFormInput {
@@ -77,7 +78,8 @@ function Curso({ post }: Props) {
       <Toolbar />
       <MyGlobalContext.Provider value={{checkout,setCheckout}}>
         {/* Aqui estoy pasando tanto el objeto estatico como el de sanity */}
-        <SingleCurso {...homeObjFour} {...objSanity}  />
+        {/* <SingleCurso {...homeObjFour} {...objSanity}  /> */}
+        <Resp {...homeObjFour} {...objSanity}/>
       </MyGlobalContext.Provider>
       <Main>
         <Rule />

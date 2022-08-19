@@ -1,13 +1,12 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
-//Context API
-
 
 import {
   Container,
   InfoSec,
   InfoRow,
   InfoColumn,
+  ImageColumn,
   TextWrapper,
   TopLine,
   Heading,
@@ -17,7 +16,7 @@ import {
   Button,
   Social,
 } from "./SingleCElements";
-import { useGlobalContext } from "./slugContext";
+import { useGlobalContext } from "../slugContext";
 
 
 interface CursoProps {
@@ -98,11 +97,11 @@ function SingleCurso({
                 </Social>               
               </TextWrapper>
             </InfoColumn>
-            <InfoColumn>   
+            <ImageColumn>   
               <ImgWrapper start={start}>
                 <Img src={img} alt={alt} />
               </ImgWrapper>
-            </InfoColumn>
+            </ImageColumn>
           </InfoRow>
         </Container>
       </InfoSec>

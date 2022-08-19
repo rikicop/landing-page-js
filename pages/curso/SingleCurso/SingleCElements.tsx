@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import Image from "next/image";
 
 export const Container = styled.div`
   z-index: 1;
@@ -59,6 +58,22 @@ export const InfoColumn = styled.div`
   }
 `;
 
+export const ImageColumn = styled.div`
+  max-width: 50%;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin: '10px';
+  }
+`;
+
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
@@ -74,10 +89,19 @@ type ImgWrapperProps = {
 };
 
 export const ImgWrapper = styled.div<ImgWrapperProps>`
-  max-width: 555px;
-  display: flex;
-  justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  width: '100%';
+  height: '100%';
+  position: 'relative';
+  vertical-align: 'middle';
+  justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")}; 
 `;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+`; 
 
 type TopLineProps = {
   lightTopLine?: boolean;
@@ -92,14 +116,6 @@ export const TopLine = styled.div<TopLineProps>`
   margin-bottom: 16px;
 `;
 
-export const Img = styled.img`
-  padding-right: 0;
-  border: 0;
-  max-width: 100%;
-  vertical-align: middle;
-  display: inline-block;
-  max-height: 500px;
-`;
 
 type HeadingProps = {
   lightText?: boolean;

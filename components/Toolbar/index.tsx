@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/heroProfile.png";
+import logo from "../../assets/DukleenLogo.png";
 import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -111,7 +111,7 @@ const Navbar = () => {
             alt="Brand Logo"
             className="brandLogo"
             height={50}
-            width={100}
+            width={50}
           />
         </div>
         <div className="toggle">
