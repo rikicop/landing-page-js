@@ -9,7 +9,7 @@ import { PostType } from "../../../typings";
 import { homeObjFour } from "../DataCurso";
 import { CommentConfirmed, ErrorContainer, Form, Input, Label, Main, Rule, Span, Submit, Textarea } from "./SlugElements";
 import { MyGlobalContext } from "../slugContext";
-import Resp from "../Resp";
+import SingleCourse from "../SingleCourse";
 
 
 interface IFormInput {
@@ -78,8 +78,7 @@ function Curso({ post }: Props) {
       <Toolbar />
       <MyGlobalContext.Provider value={{checkout,setCheckout}}>
         {/* Aqui estoy pasando tanto el objeto estatico como el de sanity */}
-        {/* <SingleCurso {...homeObjFour} {...objSanity}  /> */}
-        <Resp {...homeObjFour} {...objSanity}/>
+        <SingleCourse {...homeObjFour} {...objSanity}/>
       </MyGlobalContext.Provider>
       <Main>
         <Rule />

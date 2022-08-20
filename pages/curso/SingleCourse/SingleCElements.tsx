@@ -28,26 +28,25 @@ export const Button = styled.button<ButtonProps>`
   }
 `;
 
-
-/* Esto iria dentro de seccion  */
-/* Si quisieras un backGround */
-/* background-image: url(${planeta.src}); */
+/* With backGround */
+/* background-image: url(${planeta.src});
+   background-size: contain;
+   background-position: center; 
+*/
 export const CursoSection = styled.section`
-  /* background-image: none; 
-     background-repeat: no-repeat; 
-     background-size: contain;
-     background-position: center; */
   display: grid;
   grid-template-columns: 50% 50%;
   height: 80vh;
   align-items: center;
   .text {
     margin: 0 10px;
-    padding-left: 10rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1rem; 
+    grid-row: 1; // to change orientation
+    grid-column: 2; // to change orientation
     .highlight {
       color: var(--primary-color);
     }
@@ -59,8 +58,15 @@ export const CursoSection = styled.section`
     }
   }
   .image {
+     grid-column: 1; // to change orientation
     img {
-      width: 80%;
+      height: 90%;
+    }
+  }
+  /* Too Big Screens, you may have to increase p-left */
+  @media screen and (min-width: 1600px) {
+    .image{
+      padding-left: 10%;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {

@@ -10,9 +10,10 @@ export const Container = styled.div`
   padding-right: 50px;
   padding-left: 50px;
   @media screen and (max-width: 991px) {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 4px;
+    padding-left: 20px;
   }
+ 
 `;
 
 type InfoSecProps = {
@@ -50,13 +51,14 @@ export const InfoColumn = styled.div`
     display: flex;
     justify-content: center;
   }
+  
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
-
+  
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
   }
@@ -104,6 +106,9 @@ export const Heading = styled.h1<HeadingProps>`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
+  @media screen and (max-width: 400px) {
+    font-size: 32px;
+  }
 `;
 
 type SubtitleProps = {
@@ -113,7 +118,8 @@ export const Subtitle = styled.p<SubtitleProps>`
   max-width: 440px;
   margin-bottom: 35px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 34px;
+  text-align: left;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
 `;
 
@@ -130,6 +136,7 @@ export const Button = styled.button<ButtonProps>`
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: #fff;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  margin-top: 10px;
   outline: none;
   border: none;
   cursor: pointer;

@@ -58,9 +58,7 @@ function Hero({
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
-
               <TextWrapper>
-
                 <TopLine lightTopLine={lightTopLine}>Aprende a programar  <Typewriter words={[`${topLine}`, 'en Python', 'JavaScript', '']} /></TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc} /><Efecto bottom cascade>{description}</Efecto>

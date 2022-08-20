@@ -1,8 +1,5 @@
 import React from "react";
-//import planeta from "../../assets/background.png";
-//import imageHero from "../../assets/home4.png";
-//import { RiWhatsappFill } from "react-icons/ri";
-import { Button, CursoSection } from "./RespElements";
+import { Button, CursoSection } from "./SingleCElements";
 
 //context API
 import { useGlobalContext } from "../slugContext";
@@ -15,7 +12,7 @@ interface RespProps {
 }
 
 
-const Resp = ({img,alt,topLine}:RespProps) => {
+const SingleCourse = ({img,alt,topLine}:RespProps) => {
   //context API
   const { checkout , setCheckout } = useGlobalContext();
   console.log("CHECKOUT in SingleCurso: ", checkout);
@@ -40,6 +37,6 @@ const Resp = ({img,alt,topLine}:RespProps) => {
   );
 };
 
-export default Resp;
+export default SingleCourse;
 
 

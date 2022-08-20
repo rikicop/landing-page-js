@@ -15,8 +15,10 @@ export const Main = styled.div`
 export const Rule = styled.hr`
   margin: 45px auto;
   border: 1px solid var(--primary-color);
+  margin-top: 40px;
   @media screen and (max-width: 768px) {
     max-width: 90%;
+    
   }
 `;
 
