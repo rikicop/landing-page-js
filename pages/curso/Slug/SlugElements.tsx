@@ -11,6 +11,7 @@ export const Main = styled.div`
   /* The min-height on the main content's container will 
      in this case create whitespace below the main content 
      that will push the footer down. */
+  padding-bottom: 1rem;
   @media screen and (min-width: 1280px) {
     width: 80%;
   }

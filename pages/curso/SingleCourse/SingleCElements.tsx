@@ -46,6 +46,7 @@ export const CursoSection = styled.section`
   grid-template-columns: 50% 50%;
   height: 80vh;;
   align-items: center;
+  height: auto;  /* Avoid Overlapping */
   .text {
     margin: 0 1px;
     /* padding-left: 10rem; BORRAR? */
@@ -71,6 +72,8 @@ export const CursoSection = styled.section`
     li{
      span{
         margin-left: 3px;
+        vertical-align: super; /* Para que el icono quede alineado con el texto */
+
      }
     }
   }
