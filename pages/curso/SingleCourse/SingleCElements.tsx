@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import { BsFillCheckCircleFill } from "react-icons/bs";
+
+/* Icons */
+export const CheckCircle = styled(BsFillCheckCircleFill)`
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+`;
 
 /* Button */
 type ButtonProps = {
@@ -36,47 +44,51 @@ export const Button = styled.button<ButtonProps>`
 export const CursoSection = styled.section`
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 80vh;
+  height: 80vh;;
   align-items: center;
   .text {
-    margin: 0 10px;
-    padding-left: 1rem;
+    margin: 0 1px;
+    /* padding-left: 10rem; BORRAR? */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem; 
+    gap: 1rem; /* Espacios entre los textos de la clase .text{} */
     grid-row: 1; // to change orientation
     grid-column: 2; // to change orientation
     .highlight {
       color: var(--primary-color);
     }
     h1 {
-      font-size: 4.8vw;
+      font-size: 3.5vw;
+     
     }
     p {
       font-size: 1.5vw;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+     span{
+        margin-left: 3px;
+     }
     }
   }
   .image {
      grid-column: 1; // to change orientation
     img {
-      height: 90%;
+      height: 80%;
     }
   }
-  /* Too Big Screens, you may have to increase p-left */
-  @media screen and (min-width: 1600px) {
-    .image{
-      padding-left: 10%;
-    }
-  }
+ 
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;/* Image Up / Text Down */
     height: max-content;
     text-align: left;
     margin: 0 1rem;
-    grid-gap: 15px;
-    padding: 0px 10px;
+    grid-gap: 15px; /* Espacios entre los divs */
+    padding: 0 10px;
     
     .image {
       img {
@@ -84,16 +96,30 @@ export const CursoSection = styled.section`
       }
     }
     .text {
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: left;
       h1 {
-        font-size: 8vw;
+        font-size: 6vw;   
       }
       p {
         font-size: 5vw;
       }
     }
   }
+
+
+  /* Too Big Screens, you may have to increase p-left */
+  @media screen and (min-width: 1040px) {
+    .text {
+     /*  padding-left: 4rem; */
+      gap: 2.5rem; 
+    }
+
+    .image{
+      img {
+       float: right;/* Arrastra la img a la derecha para pegarla al texto */
+       padding-left: 15%;
+       padding-right: 5%;
+      }
+    }
+  }
+
 `;

@@ -7,17 +7,22 @@ export const Main = styled.div`
   width: 750px;
   max-width: calc(100vw - 50px);
   //media for large screens
+  min-height: 10vh;/* Avoid overlapping in small height */
+  /* The min-height on the main content's container will 
+     in this case create whitespace below the main content 
+     that will push the footer down. */
   @media screen and (min-width: 1280px) {
     width: 80%;
   }
 `;
 
 export const Rule = styled.hr`
-  margin: 45px auto;
+  margin: 0 auto;
   border: 1px solid var(--primary-color);
   margin-top: 40px;
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     max-width: 90%;
+    margin-top: 85px;
     
   }
 `;
@@ -25,7 +30,8 @@ export const Rule = styled.hr`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin: 10px 2px;
+  margin: 0 2px;
+  padding-top: 70px;
 `;
 
 export const Label = styled.label`
