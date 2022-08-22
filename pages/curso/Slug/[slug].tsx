@@ -16,6 +16,8 @@ import SingleCourse from "../SingleCourse";
 interface IFormInput {
   _id: string;
   name: string;
+  lastname: string;
+  phone: string;
   email?: string;
   comment: string;
 }
@@ -93,7 +95,7 @@ function Curso({ post }: Props) {
 
           { checkout &&
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <h3 style={{ color: "blue" }}>Bienvenido</h3>
+            <h3 style={{ color: "#fbaa18" }}>Bienvenido</h3>
             <h4 style={{ color: "gray", marginTop: "2px" }}>
               Para poder contactarnos, por favor ingrese sus datos
             </h4>
@@ -112,7 +114,23 @@ function Curso({ post }: Props) {
                 placeholder="Nombre y Apellido"
               />
             </Label>
+            <Label> 
+              <Span>Apellido</Span>
+              <Input
+                {...register("lastname", { required: true })}
+                type="text"
+                placeholder="Apellido"
+              />
+            </Label>
             <Label>
+              <Span>Teléfono</Span>
+              <Input
+                {...register("phone", { required: true })}
+                type="text"
+                placeholder="Teléfono"
+              />
+            </Label>
+              <Label>
               <Span>Email</Span>
               <Input
                 {...register("email", { required: true })}

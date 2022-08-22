@@ -92,7 +92,7 @@ export const Submit = styled.button`
   margin: 10px 0;
   cursor: pointer;
   &:hover {
-    background-color: #719ece;
+    background-color: #14d454;
   }
 `;
 

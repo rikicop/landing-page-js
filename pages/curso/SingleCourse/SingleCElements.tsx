@@ -17,7 +17,7 @@ type ButtonProps = {
 
 export const Button = styled.button<ButtonProps>`
   border-radius: 4px;
-  background: ${({ primary }) => (primary ? "#4B59F7" : "#0467FB")};
+  background: ${({ primary }) => (primary ? "" : "#fbaa18")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: #fff;
@@ -27,8 +27,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   &:hover {
     transition: all 0.3s ease-out;
-    background: #fff;
-    background-color: ${({ primary }) => (primary ? "#0467FB" : "#4B59F7")};
+    background: #000;
+    background-color: ${({ primary }) => (primary ? "#0467FB" : "#fbaa18")};
   }
   @media screen and (max-width: 960px) {
     width: 80%;
