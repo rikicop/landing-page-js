@@ -14,6 +14,8 @@ import Acerca from "../components/Acerca";
 //import CardList from "../components/CardList"; este es el blog, por ahora, no se va a utilizar
 import Navbar from "components/Navbar";
 import CursoList from "components/CursoList";
+import NFTList from "components/NFTList";
+
 
 
 
@@ -55,6 +57,14 @@ export default function Home({cursos: cursos }: any) {
       ) : (
         <p>No Courses found</p>
       )} 
+       {/*End Cursos */}
+        {/* NFT */}
+       {mappedCursos.length ? (
+        <NFTList data={mappedCursos} title="NFT Cards" />
+      ) : (
+        <p>No Courses found</p>
+      )} 
+       {/*End NFT */}
     </>
   );
 }
