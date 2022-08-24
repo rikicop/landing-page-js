@@ -178,5 +178,5 @@ export const TextLogoNav = styled.div`
 `;
 
 export const LogoImg = styled.div`
-  padding: 5px 3px 0 0;
+  padding: 7px 3px 0 0;
 `;
