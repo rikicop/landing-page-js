@@ -12,30 +12,23 @@ export const Card = styled.section`
   width: 100%;
   max-width: fit-content;
   height: 500px;
-  background-color: ${colors.darkBlueCardBG};
+  background-color: black;
   padding: 20px;
   border-radius: ${borderRadius.primary};
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 
   .card__img {
-    height: 53%;
+    height: 44%;
     width: 100%;
-    background-image: url(${img.src}); // img.src
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     border-radius: ${borderRadius.primary};
     overflow: hidden;
-
-    &:hover {
-      .card__visible {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-        background-color: ${colors.cyanHover};
-      }
+    img{
+      height: 100%;
+      width: 100%;
+      vertical-align:top;
     }
+
   }
 
   .card__visible {
@@ -73,7 +66,7 @@ export const Card = styled.section`
     }
   }
   .card__info-box-left {
-    color: ${colors.cyan};
+    color: #fbaa18; //${colors.cyan}
     gap: 5px;
     font-size: ${fontSize.small};
   }
@@ -84,8 +77,8 @@ export const Card = styled.section`
   }
 
   .card__footer {
-    border-top: 1px solid ${colors.darkBlueLine};
-    padding: 20px 0;
+    border-top: 1px solid #fbaa18;;
+    padding: 8px 0;
     margin: 20px 0 0 0;
     .avatar {
       width: 30px;
@@ -107,6 +100,25 @@ export const Card = styled.section`
           color: ${colors.cyan};
         }
       }
+    }
+  }
+   .btn-wrapper {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .btn-read {
+      padding: 1rem;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 1rem;
+      border: 2px solid #ffce74;
+      background: transparent;
+      color: #fbaa18;
+      border-radius: 1rem;
+      transition: background 200ms ease-in, color 200ms ease-in;
     }
   }
 

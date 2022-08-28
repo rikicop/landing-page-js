@@ -1,24 +1,19 @@
 import { ArticleItemProps } from "../../Interfaces";
 //import { useRouter } from "next/router";
-import { EthereumIcom, ClockIcon, ViewIcon } from "../../assets/svg";
+import { EthereumIcom, ClockIcon } from "../../assets/svg";
 import { BoxShadow, Flex, Card as StyledCard } from "./NFTElements";
-import image from "../../assets/image-avatar.png";
 import { useRouter } from "next/router";
 
 const NFTItem = ({ data }: ArticleItemProps) => {
   const router = useRouter();
   return (
       <BoxShadow onClick={() => router.push(`/curso/Slug/${data.slug.current}`)}>
-        <StyledCard>
+        <StyledCard >
           <div className="card__img">
-            <div className="card__visible">
-              <div className="card__visible-icon">
-                <ViewIcon />
-              </div>
-            </div>
+              <img src={data.mainImage} alt="avatar" />
           </div>
           <div className="card__text-cont">
-            <h3>{data.title} #3429</h3>
+            <h3>{data.title}</h3>
             <p> Our Equilibrium collection promotes balance and calm</p>
           </div>
           <Flex className="card__info-row">
@@ -32,14 +27,18 @@ const NFTItem = ({ data }: ArticleItemProps) => {
             </Flex>
           </Flex>
           <div className="card__footer">
-            <Flex style={{justifyContent: "flex-start"}} >
+            <div className="btn-wrapper">
+              <button className="btn-read">Más</button>
+            </div>
+            {/* En caso de Autor */}
+        {/*     <Flex style={{justifyContent: "flex-start"}} >
               <div className="avatar">
-                <img src={image.src} alt="avatar" />
+                <img src={data.mainImage} alt="avatar" />
               </div>
               <p>
                 Creating of <span>Jules Wyvern</span>
               </p>
-            </Flex>
+            </Flex> */}
           </div>
         </StyledCard>
     </BoxShadow>  
