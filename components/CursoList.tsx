@@ -16,19 +16,40 @@ const Wrapper = styled.div`
   }
 `;
 
+export const FeatureTextWrapper = styled.div`
+  margin-top: 8.5rem;
+	position: relative;
+	padding: 0 0 20px;
+	margin-bottom: 4rem;
+
+	&:before {
+		width: 40px;
+		height: 2px;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		background-color: #fbaa18;
+		transform: translateX(-50%);
+	}
+`;
+
+
 const Title = styled.h1`
-  margin-top: 7rem;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #000000;
-  align-self: center;
   text-align: center;
+  font-size: clamp(1.3rem, 13vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: 0.4rem;
+  margin: auto;
+  color: black;
 `;
 
 const CursoList = ({ data, title }: IndexPageProps) => {
   return (
     <section id="cursos">
-      <Title>{title}</Title>
+      <FeatureTextWrapper>
+        <Title>{title}</Title>
+      </FeatureTextWrapper>
       <Wrapper>
         {data.map((article, index) => (
           <CursoItem data={article} key={index} />

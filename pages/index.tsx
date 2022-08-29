@@ -9,14 +9,12 @@ import { homeObjOne, homeObjFour } from "../DataHero";
 // COMPONENTS
 import WhatsAppButton from "../components/WhatsAppButton";
 import Hero from "../components/Hero";
-import Services from "../components/Services";
+//import Services from "../components/Services";
 import Acerca from "../components/Acerca";
 //import CardList from "../components/CardList"; este es el blog, por ahora, no se va a utilizar
 import Navbar from "components/Navbar";
 import CursoList from "components/CursoList";
-import NFTList from "components/NFTList";
-
-
+import Features from "components/Features";
 
 
 export default function Home({cursos: cursos }: any) {
@@ -50,7 +48,8 @@ export default function Home({cursos: cursos }: any) {
       <Navbar />
       <Hero {...homeObjOne} />
       <Acerca {...homeObjFour} />
-      <Services />
+      <Features/>
+   {/*    <Services /> */}
        {/* Cursos */}
        {mappedCursos.length ? (
         <CursoList data={mappedCursos} title="Curso" />
@@ -58,13 +57,6 @@ export default function Home({cursos: cursos }: any) {
         <p>No Courses found</p>
       )} 
        {/*End Cursos */}
-        {/* NFT */}
-       {mappedCursos.length ? (
-        <NFTList data={mappedCursos} title="NFT Cards" />
-      ) : (
-        <p>No Courses found</p>
-      )} 
-       {/*End NFT */}
     </>
   );
 }

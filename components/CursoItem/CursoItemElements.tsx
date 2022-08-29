@@ -11,12 +11,14 @@ export const CardContainer = styled.div`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
+  background-color: black;
   &:hover {
     transform: scale(1.03);
   }
-  &:hover .btn-wrapper .btn-read {
-    background: #0467fb;
-    color: #fff;
+  &:hover  .footer-wrapper .btn-wrapper .btn-read {
+    background: #fbaa18;
+    border: 2px solid #f7e30f;
+    color: black;
   }
 
   .card-head {
@@ -26,40 +28,21 @@ export const CardContainer = styled.div`
         width: 100%;
         height: 205px;
         filter: brightness(95%);
+        border-radius: 1rem;
       }
     }
     .card-title {
+      color: #fbaa18;
       margin: 0 1rem;
     }
     .card-excerpt {
+      color: #fff;
       padding: 0 1rem;
     }
   }
  
-  /* In Case you need Authors */
-  /* 
-  .info-author {
-    margin-top: 10px;
-    border-top: #3e3c3c solid 1px;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .name-author {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #3e3c3c;
-    }
-    .img-author {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 1rem;
-    }
-  } */
   .footer-wrapper {
-    margin-top: 1px;
-    padding: 1rem;
+    padding: 0.6rem 1rem;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
@@ -71,8 +54,8 @@ export const CardContainer = styled.div`
       width: 90%;
       align-self: center;
     } 
-    .info-course{
-      margin-top: 10px;
+    .more-info{
+      color: #fff;
       text-align: left;
     }
     .btn-wrapper{
@@ -84,9 +67,9 @@ export const CardContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
         margin: 1rem;
-        border: 2px solid #2436f9;
+        border: 2px solid #d9f924;
         background: transparent;
-        color: #4b59f7;
+        color: #fbaa18;
         border-radius: 1rem;
         transition: background 200ms ease-in, color 200ms ease-in;
     }
@@ -94,3 +77,5 @@ export const CardContainer = styled.div`
     
   }
 `;
+
+
