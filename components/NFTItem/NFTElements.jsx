@@ -9,24 +9,27 @@ import {
 } from "./VarStyles";
 
 export const Card = styled.section`
-  width: 100%;
-  max-width: fit-content;
   height: 500px;
+  margin-top: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   background-color: black;
-  padding: 20px;
+  margin-bottom: 1rem;
+  padding: 10px;
   border-radius: ${borderRadius.primary};
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
+  
 
   .card__img {
-    height: 44%;
-    width: 100%;
-    border-radius: ${borderRadius.primary};
-    overflow: hidden;
     img{
-      height: 100%;
-      width: 100%;
-      vertical-align:top;
+     width: 100%;
+     height: 100%;
+     filter: brightness(95%);
     }
 
   }
@@ -40,8 +43,6 @@ export const Card = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     .card__visible-icon {
     }
   }
@@ -50,13 +51,13 @@ export const Card = styled.section`
     margin: 20px 0;
     h3 {
       font-weight: ${fontWidth.semiBold};
-      color: ${colors.White};
+      color: #fbaa18;
       font-size: ${fontSize.large};
       margin-bottom: 15px;
       cursor: pointer;
       transition: 0.2s;
       &:hover {
-        color: ${colors.cyan};
+        color: #7afb18;
       }
     }
     p {
@@ -66,18 +67,18 @@ export const Card = styled.section`
     }
   }
   .card__info-box-left {
-    color: #fbaa18; //${colors.cyan}
+    color: whitesmoke;
     gap: 5px;
     font-size: ${fontSize.small};
   }
   .card__info-box-right {
-    color: ${colors.softBlue};
+    color: whitesmoke;
     gap: 5px;
     font-size: ${fontSize.small};
   }
 
   .card__footer {
-    border-top: 1px solid #fbaa18;;
+    border-top: 1px solid #fbaa18;
     padding: 8px 0;
     margin: 20px 0 0 0;
     .avatar {
@@ -140,9 +141,8 @@ export const BoxShadow = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  align-items: ${(props) => props.align || "center"};
-  justify-content: ${(props) => props.justify || "space-between"};
-  flex-direction: ${(props) => props.direction || "row"};
-  height: ${({ height }) => height};
-  gap: ${(props) => props.gap || "5px"};
+  align-items: "center";
+  justify-content:"space-around";
+  flex-direction: "row";
+  gap:"5px";
 `;

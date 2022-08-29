@@ -1,8 +1,9 @@
 import { ArticleItemProps } from "../../Interfaces";
 //import { useRouter } from "next/router";
-import { EthereumIcom, ClockIcon } from "../../assets/svg";
 import { BoxShadow, Flex, Card as StyledCard } from "./NFTElements";
 import { useRouter } from "next/router";
+ 
+import { FaChalkboardTeacher,FaClock } from "react-icons/fa";
 
 const NFTItem = ({ data }: ArticleItemProps) => {
   const router = useRouter();
@@ -14,16 +15,16 @@ const NFTItem = ({ data }: ArticleItemProps) => {
           </div>
           <div className="card__text-cont">
             <h3>{data.title}</h3>
-            <p> Our Equilibrium collection promotes balance and calm</p>
+            <p>{data.excerpt}</p>
           </div>
-          <Flex className="card__info-row">
+          <Flex>
             <Flex>
-              <EthereumIcom />
-              <span className="card__info-box-left">0.041 eth</span>
+              <FaChalkboardTeacher  style={{ color: '#7afb18', width: '20px' }}/>
+              <span className="card__info-box-left">Gratis Primera Clase</span>
             </Flex>
             <Flex>
-              <ClockIcon />
-              <span className="card__info-box-right">3 days left</span>
+              <FaClock style={{ color: '#7afb18', width: '20px' }}/>
+              <span className="card__info-box-right">1-2Hr</span>
             </Flex>
           </Flex>
           <div className="card__footer">

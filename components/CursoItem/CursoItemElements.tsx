@@ -21,17 +21,21 @@ export const CardContainer = styled.div`
 
   .card-head {
     .image-wrapper {
+      padding: 1rem 1rem 0rem 1rem;
       img {
+        width: 100%;
+        height: 205px;
         filter: brightness(95%);
       }
     }
     .card-title {
-      margin: 1rem;
+      margin: 0 1rem;
     }
     .card-excerpt {
       padding: 0 1rem;
     }
   }
+ 
   /* In Case you need Authors */
   /* 
   .info-author {
@@ -53,26 +57,40 @@ export const CardContainer = styled.div`
       margin-right: 1rem;
     }
   } */
-  .btn-wrapper {
-    margin-top: 10px;
-    /* border-top: #3e3c3c solid 1px; */
+  .footer-wrapper {
+    margin-top: 1px;
     padding: 1rem;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
     text-align: center;
-    .btn-read {
-      padding: 1rem;
-      font-family: inherit;
-      font-weight: bold;
-      font-size: 1rem;
-      margin: 1rem;
-      border: 2px solid #2436f9;
-      background: transparent;
-      color: #4b59f7;
-      border-radius: 1rem;
-      transition: background 200ms ease-in, color 200ms ease-in;
+    position: relative;
+    hr{
+      margin-top: 5px;
+      position: absolute;
+      width: 90%;
+      align-self: center;
+    } 
+    .info-course{
+      margin-top: 10px;
+      text-align: left;
     }
+    .btn-wrapper{
+      padding-top: 10px;
+      position: relative;
+      .btn-read {    
+        padding: 1rem;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 1rem;
+        border: 2px solid #2436f9;
+        background: transparent;
+        color: #4b59f7;
+        border-radius: 1rem;
+        transition: background 200ms ease-in, color 200ms ease-in;
+    }
+  }
+    
   }
 `;
