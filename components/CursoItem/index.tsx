@@ -21,11 +21,11 @@ const CursoItem = ({ data }: ArticleItemProps) => {
       
          <div className="more-info">
           <div className="promo">
-            <FaChalkboardTeacher  style={{ color: '#7afb18', width: '20px' }}/>
+            <FaChalkboardTeacher  style={{ color: '#fbaa18', width: '20px' }}/>
               <span style={{marginLeft:"4px"}}>Primera clase gratis </span>      
           </div>
           <div className="tiempo">
-            <FaClock style={{ color: '#7afb18', width: '20px' }}/>
+            <FaClock style={{ color: '#fbaa18', width: '20px' }}/>
             <span style={{marginLeft:"4px"}}>1-2Hrs</span>
           </div>
         </div>

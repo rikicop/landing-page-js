@@ -11,7 +11,7 @@ export const CardContainer = styled.div`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
-  background-color: black;
+  background-color: white;
   &:hover {
     transform: scale(1.03);
   }
@@ -25,9 +25,7 @@ export const CardContainer = styled.div`
     .image-wrapper {
       padding: 1rem 1rem 0rem 1rem;
       img {
-        width: 100%;
-        height: 205px;
-        filter: brightness(95%);
+        /* filter: brightness(95%); */
         border-radius: 1rem;
       }
     }
@@ -36,7 +34,7 @@ export const CardContainer = styled.div`
       margin: 0 1rem;
     }
     .card-excerpt {
-      color: #fff;
+      color: #6c757d;
       padding: 0 1rem;
     }
   }
@@ -55,7 +53,7 @@ export const CardContainer = styled.div`
       align-self: center;
     } 
     .more-info{
-      color: #fff;
+      color: #000000;
       text-align: left;
     }
     .btn-wrapper{
@@ -67,7 +65,7 @@ export const CardContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
         margin: 1rem;
-        border: 2px solid #d9f924;
+        border: 2px solid #000000;
         background: transparent;
         color: #fbaa18;
         border-radius: 1rem;
