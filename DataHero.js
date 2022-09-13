@@ -10,7 +10,7 @@ export const homeObjOne = {
     "Aprenda programación con cursos gratuitos en línea de cursos universitarios reales de Harvard, MIT y más de las principales universidades del mundo. Obtenga las habilidades de codificación esenciales necesarias para el desarrollo web frontend y/o backend, aprendizaje automático, IOS, Android y mucho más.",
   buttonLabel: "CV",
   imgStart: "",
-  img: require("./assets/progressive_app.png"),
+  img: require("./assets/development.svg"),
   alt: "Credit Card",
   start: "",
 };
@@ -27,7 +27,7 @@ export const homeObjTwo = {
     " Asistente de investigación en Arthur V. Mauro Institute for Peace & Justice Anterior: Doctors Without Borders/Médecins Sans Frontières (MSF) Egresado de la Universidad Distrital Francisco José de Caldas.",
   buttonLabel: "Más información",
   imgStart: true,
-  img: require("./assets/hero3.png"),
+  img: require("./assets/headsets.svg"),
   alt: "Vault",
   start: "",
 };
@@ -62,7 +62,7 @@ export const homeObjFour = {
     " Asistente de investigación en Arthur V. Mauro Institute for Peace & Justice Anterior: Doctors Without Borders/Médecins Sans Frontières (MSF) Egresado de la Universidad Distrital Francisco José de Caldas.",
   buttonLabel: "Más información",
   imgStart: "start",
-  img: require("./assets/hero3.png"),
+  img: require("./assets/headsets.svg"),
   alt: "Vault",
   start: "true",
 };

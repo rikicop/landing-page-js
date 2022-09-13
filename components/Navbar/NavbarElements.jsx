@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 
   .brandLogo {
     padding-top: 5px;
-    border-radius: 100px;
+    border-radius: 10px;
   } 
   
   .brand {
@@ -169,7 +169,7 @@ export const LinksContainerNav = styled.div`
 `;
 
 export const TextLogoNav = styled.div`
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   @media screen and (min-width: 2px) and (max-width: 320px) {
     font-size: 20px;

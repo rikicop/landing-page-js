@@ -64,12 +64,12 @@ export const LowerFooter = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: #fbaa18;
+  background-color: var(--primary-color);
   color: #000000;
   padding: 1rem;
   h2 {
     span {
-      color: #e67824;
+      color: var(--primary-color);
       text-transform: uppercase;
     }
   }
@@ -99,7 +99,7 @@ export const ContactContainer = styled.div`
 
 export const Title = styled.div`
   h2 {
-      color: #fbaa18;
+      color: var(--primary-color);
       text-transform: uppercase;
       padding: 1rem;
   }

@@ -36,11 +36,11 @@ export default function Footer() {
       <ContactContainer>
 
         <Title>
-          <h2>Contact us</h2>
+          <h2>Contáctanos</h2>
         </Title>
 
-        <p>+34 654 765 456</p>
-        <p>soporte@dukleen.com</p>
+        <p>+57 320 957 3682</p>
+        <p>rikotalora@gmail.com</p>
 
       </ContactContainer>
 
@@ -48,7 +48,7 @@ export default function Footer() {
 
 
     <LowerFooter>
-      <h2>© 2020 Dukleen. All rights reserved {/* <span>Educación en Línea</span> */}</h2>
+      <h2>© 2020 Dukleen.  {/* <span>Educación en Línea</span> */}</h2>
     </LowerFooter>
    </>
   );

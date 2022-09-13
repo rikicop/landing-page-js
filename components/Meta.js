@@ -8,7 +8,7 @@ const Meta = () => {
     <Head>
       <link rel="shortcut icon" href="/images/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-       
+
       <meta
         name="keywords"
         content="cursos, python, javascript, programacion, educacion, react, django, next, informatica"
@@ -18,8 +18,8 @@ const Meta = () => {
         content="Cursos de programacion en python, javascript, html, css"
       />
       <meta charSet="utf-8" />
-      
-      <title>Dukleen</title>
+
+      <title>JavaScript Esencial</title>
     </Head>
   );
 };

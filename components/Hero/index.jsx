@@ -1,8 +1,5 @@
-//import Image from "next/image";
-//import React from "react";
+
 import { Typewriter } from "react-simple-typewriter";
-//{/* <Typewriter words={['Programa Ya!!','Incríbete',`${topLine}`]}/> */}
-//import { Section } from "./HeroElements";
 import { useRouter } from "next/router";
 import { Fade as Efecto } from "react-reveal";
 

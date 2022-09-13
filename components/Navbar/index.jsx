@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/Logo nuevo 1.png";
-import { BsToggleOn, BsToggleOff } from "react-icons/bs";
+import logo from "../../assets/js-icon.png";
+//import { BsToggleOn, BsToggleOff } from "react-icons/bs";
+
+import { FaBars } from "react-icons/fa"
+import { CgClose } from "react-icons/cg"
 import { Link as LinkScroll } from "react-scroll";
 
 import { Fade as Efecto } from "react-reveal";
@@ -26,17 +29,17 @@ const Navbar = () => {
         </LogoImg>
 
         <TextLogoNav>
-          <Efecto left cascade duration={3000}>DUKLEEN</Efecto>
+          JavaScript Esencial
         </TextLogoNav>
 
         <div className="toggle">
           {navState ? (
-            <BsToggleOn
+            <CgClose
               onClick={() => setNavState(false)}
               color="var(--primary-color)"
             />
           ) : (
-            <BsToggleOff
+            <FaBars
               onClick={() => setNavState(true)}
               color=" var(--primary-color)"
             />
