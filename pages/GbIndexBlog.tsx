@@ -20,6 +20,7 @@ import CursoList from "components/CursoList";
 export default function Home({ posts: posts, cursos: cursos }: any) {
   const [mappedPosts, setMappedPosts] = useState([]);
   const [mappedCursos, setMappedCursos] = useState([]);
+  console.log(mappedPosts);
   useEffect(() => {
     if (posts.length && cursos.length) {
       const imgBuilder = imageUrlBuilder({

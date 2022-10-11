@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../assets/logo.svg";
 
 
 const Meta = () => {
   return (
     <Head>
-      <link rel="shortcut icon" href="/images/favicon.ico" />
+      <link rel="shortcut icon" href="/images/logo2.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <meta
@@ -19,7 +18,7 @@ const Meta = () => {
       />
       <meta charSet="utf-8" />
 
-      <title>JavaScript Esencial</title>
+      <title>Ricardo Otálora</title>
     </Head>
   );
 };

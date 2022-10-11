@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/js-icon.png";
+import logo from "../../assets/logo2.png";
 //import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 
 import { FaBars } from "react-icons/fa"
@@ -21,7 +21,7 @@ const Navbar = () => {
         <LogoImg className="logo">
           <Image
             src={logo}
-            alt="Dukleen"
+            alt="logo"
             className="brandLogo"
             height={40}
             width={40}
@@ -29,7 +29,7 @@ const Navbar = () => {
         </LogoImg>
 
         <TextLogoNav>
-          JavaScript Esencial
+          Ricardo Otálora
         </TextLogoNav>
 
         <div className="toggle">
