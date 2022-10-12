@@ -48,7 +48,7 @@ export default function Footer() {
 
 
     <LowerFooter>
-      <h2>© 2020 Dukleen.  {/* <span>Educación en Línea</span> */}</h2>
+      <h2>© 2022 RO.  {/* <span>Educación en Línea</span> */}</h2>
     </LowerFooter>
    </>
   );
