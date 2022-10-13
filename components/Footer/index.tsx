@@ -1,12 +1,12 @@
 import React from "react";
-import logo_text from "../../assets/Recurso 7@4x.png";
-import Image from "next/image";
+//import logo_text from "../../assets/Recurso 7@4x.png";
+//import Image from "next/image";
 
 // icons 
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 // styled components
-import { LowerFooter, Section, ImgContainer, BrandContainer, ContactContainer, Title } from "./FooterElements";
+import { LowerFooter, Section, BrandContainer, ContactContainer, Title } from "./FooterElements";
 
 export default function Footer() {
   
@@ -15,10 +15,10 @@ export default function Footer() {
    <>
     <Section id ="footer">
       <BrandContainer>
-        <ImgContainer>
+       {/*  <ImgContainer>
           <Image src={logo_text} className="img_logo" alt="Footer Logo" height={50} width={200} />
         </ImgContainer>
-
+ */}    RICARDO OTÁLORA LUNA
         <ul>
           <li><FaFacebook/></li>
           <li><FaInstagram/></li>
@@ -36,7 +36,7 @@ export default function Footer() {
       <ContactContainer>
 
         <Title>
-          <h2>Contáctanos</h2>
+          <h2>Contáctame</h2>
         </Title>
 
         <p>+57 320 957 3682</p>

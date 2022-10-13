@@ -4,14 +4,14 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: "Ahora!!",
-  headline: "Desde Cursos de programación",
+  topLine: "Hi there, I'm",
+  headline: "Ricardo Otálora",
   description:
-    "Aprenda programación con cursos gratuitos en línea de cursos universitarios reales de Harvard, MIT y más de las principales universidades del mundo. Obtenga las habilidades de codificación esenciales necesarias para el desarrollo web frontend y/o backend, aprendizaje automático, IOS, Android y mucho más.",
+    "I'm a software engineer with a passion for building web applications. I am a Javascript programmer, but I also have experience with other languages such as Python. I am also familiar with the following technologies: React, Next ,Node, Express, MongoDB, SQL. I am currently working on several projects that you can check in my portfolio. Here I leave my resume if you need more information about me.",
   buttonLabel: "CV",
   imgStart: "",
-  img: require("./assets/development.svg"),
-  alt: "Credit Card",
+  img: require("./assets/program.svg"),
+  alt: "Resume",
   start: "",
 };
 

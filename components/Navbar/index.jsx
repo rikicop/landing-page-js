@@ -62,16 +62,16 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade duration={2000}>Cursos</Efecto></li>
+            <li><Efecto left cascade duration={2000}>Portfolio</Efecto></li>
           </LinkScroll>
 
           <LinkScroll
-            to="servicios"
+            to="skills"
             smooth={true}
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade>Servicios</Efecto></li>
+            <li><Efecto left cascade>Skills</Efecto></li>
           </LinkScroll>
 
           <LinkScroll
@@ -80,7 +80,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade>Contacto</Efecto></li>
+            <li><Efecto left cascade>Contact</Efecto></li>
           </LinkScroll>
         </ul>
       </LinksContainerNav>

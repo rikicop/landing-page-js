@@ -44,7 +44,7 @@ export default function Home({cursos: cursos }: any) {
   }, [cursos]);
   return (
     <>
-      <WhatsAppButton />
+     {/*  <WhatsAppButton /> */}
       <Navbar />
       <Hero {...homeObjOne} />
       <Acerca {...homeObjFour} />
@@ -52,7 +52,7 @@ export default function Home({cursos: cursos }: any) {
    {/*    <Services /> */}
        {/* Cursos */}
        {mappedCursos.length ? (
-        <CursoList data={mappedCursos} title="Curso" />
+        <CursoList data={mappedCursos} title="Portfolio" />
       ) : (
         <p>No Courses found</p>
       )} 

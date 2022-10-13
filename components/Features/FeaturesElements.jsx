@@ -83,16 +83,16 @@ export const FeatureImageWrapper = styled.div`
 	margin-bottom: 1rem;
 	border-radius: 50%;
 	&.one {
-		background: linear-gradient(130deg, #fffa9c 0%, #b0ffb1 100%);
+		background: linear-gradient(130deg, #00b1ec 0%, #0d84ab 100%);
 	}
 	&.two {
-		background: linear-gradient(220deg, #ffb702 0%, #efdd83 100%);
+		background: linear-gradient(220deg, #14da4c 0%, #147605 100%);
 	}
 	&.three {
 		background: linear-gradient(130deg, #ff8989 0%, #ffddc5 100%);
 	}
 	&.four {
-		background: linear-gradient(130deg, #ffa8e8 0%, #ffe6e6 100%);
+		background: linear-gradient(130deg, #e91e63 0%, #860101 100%);
 	}
 	&.five {
 		background: linear-gradient(130deg, #ffaf73 0%, #fffecc 100%);

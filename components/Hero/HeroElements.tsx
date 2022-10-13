@@ -117,9 +117,10 @@ type SubtitleProps = {
 export const Subtitle = styled.p<SubtitleProps>`
   max-width: 440px;
   margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 24px;
   text-align: left;
+  word-wrap: break-word;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
 `;
 

@@ -16,10 +16,10 @@ import { featuresData } from '../../data/FeaturesData';
 
 const Features = () => {
     return (
-        <FeatureSection id="servicios">
+        <FeatureSection id="skills">
             <Container>
                 <FeatureTextWrapper>
-                    <FeatureTitle>Servicios</FeatureTitle>
+                    <FeatureTitle>Skills</FeatureTitle>
                 </FeatureTextWrapper>
                 <FeatureWrapper>
                     {featuresData.map((el, index) => (

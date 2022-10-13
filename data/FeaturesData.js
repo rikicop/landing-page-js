@@ -4,22 +4,23 @@ import { MdDesignServices } from 'react-icons/md';
 import { IoLogoXing } from 'react-icons/io';
 import { HiCode } from 'react-icons/hi';
 import { MdSlowMotionVideo } from 'react-icons/md';
-import { FaPhotoVideo } from 'react-icons/fa';
+import { FaPhotoVideo, FaReact } from 'react-icons/fa';
+import { SiMongodb } from 'react-icons/si';
 
-const iconStyle = (Icon) => <Icon size="3rem" color="#808080" />;
+const iconStyle = (Icon) => <Icon size="3rem" color="white" />;
 
 export const featuresData = [
     {
-        name: 'UI/UX',
+        name: 'Libray/FrameWork',
         description:
-            'Landing Pages, User Flow, Wireframing, Prototyping, Mobile App Design, Web App',
-        icon: iconStyle(BsPhone),
+            'Javascript, React, NextJs',
+        icon: iconStyle(FaReact),
         imgClass: 'one',
     },
     {
-        name: 'Icon/Illustration',
-        description: 'Character Design, Icon Set, Illustration Guide, Illustration Set',
-        icon: iconStyle(MdDesignServices),
+        name: 'Database',
+        description: 'MongoDB, Sanity.io, SQL',
+        icon: iconStyle(SiMongodb),
         imgClass: 'two',
     },
     /*  {
@@ -29,8 +30,8 @@ export const featuresData = [
          imgClass: 'three',
      }, */
     {
-        name: 'Development',
-        description: 'HTML/CSS, JavaScript Animation, WordPress, Responsive Website',
+        name: 'Design',
+        description: 'HTML/CSS, Javascript, Styled Components',
         icon: iconStyle(HiCode),
         imgClass: 'four',
     },

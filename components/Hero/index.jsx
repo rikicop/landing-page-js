@@ -56,16 +56,16 @@ function Hero({
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>Aprende a programar  <Typewriter words={[`${topLine}`, 'en Python', 'JavaScript', '']} /></TopLine>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc} /><Efecto bottom cascade>{description}</Efecto>
+                <Subtitle lightTextDesc={lightTextDesc}><Efecto bottom cascade>{description}</Efecto></Subtitle>
                 <Button
                   big
                   fontBig
                   primary={primary}
                   onClick={() =>
                     router.push(
-                      "https://u.pcloud.link/publink/show?code=XZFTMRVZbxSEfFJ0f5jqKjwlLmS0yzScj6aV"
+                      "https://u.pcloud.link/publink/show?code=XZjFQjVZ3GK5cI6oSLpuFUDKvaoUhJmO5WIX"
                     )
                   }
                 >
