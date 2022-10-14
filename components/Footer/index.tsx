@@ -6,7 +6,7 @@ import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 // styled components
-import { LowerFooter, Section, BrandContainer, ContactContainer, Title } from "./FooterElements";
+import { LowerFooter, Section, BrandContainer, ContactContainer, Title, BrandName } from "./FooterElements";
 
 export default function Footer() {
   
@@ -18,7 +18,8 @@ export default function Footer() {
        {/*  <ImgContainer>
           <Image src={logo_text} className="img_logo" alt="Footer Logo" height={50} width={200} />
         </ImgContainer>
- */}    RICARDO OTÁLORA LUNA
+
+ */}    <BrandName> RICARDO OTÁLORA LUNA</BrandName>
         <ul>
           <li><FaFacebook/></li>
           <li><FaInstagram/></li>

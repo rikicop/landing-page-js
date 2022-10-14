@@ -104,3 +104,11 @@ export const Title = styled.div`
       padding: 1rem;
   }
 `;
+
+export const BrandName = styled.h1`
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: whitesmoke;
+  text-transform: uppercase;
+  padding: 1rem;
+`;
