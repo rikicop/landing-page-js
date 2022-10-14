@@ -37,7 +37,7 @@ export default function Footer() {
       <ContactContainer>
 
         <Title>
-          <h2>Contáctame</h2>
+          <h2>Contácto</h2>
         </Title>
 
         <p>+57 320 957 3682</p>

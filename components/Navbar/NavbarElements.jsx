@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   align-items: center;
   margin: 0;
   padding: 35px;
+  box-shadow: 5px 5px 10px rgba(0,0,0, 0.1); 
 
   .brandLogo {
     padding-top: 5px;

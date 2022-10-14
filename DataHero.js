@@ -1,9 +1,9 @@
 export const homeObjOne = {
   primary: true,
-  lightBg: false,
-  lightTopLine: true,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightTopLine: false,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "Hi there, I'm",
   headline: "Ricardo Otálora",
   description:
