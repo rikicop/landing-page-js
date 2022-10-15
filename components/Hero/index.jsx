@@ -1,7 +1,7 @@
 
 import { Typewriter } from "react-simple-typewriter";
 import { useRouter } from "next/router";
-import { Fade as Efecto } from "react-reveal";
+//import { Fade as Efecto } from "react-reveal";
 
 import {
   Container,
@@ -58,7 +58,7 @@ function Hero({
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}><Efecto bottom cascade>{description}</Efecto></Subtitle>
+                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 <Button
                   big
                   fontBig

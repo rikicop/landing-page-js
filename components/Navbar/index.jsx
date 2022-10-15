@@ -2,13 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import logo from "../../assets/Logo2.png";
-//import { BsToggleOn, BsToggleOff } from "react-icons/bs";
+
 
 import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 import { Link as LinkScroll } from "react-scroll";
 
-import { Fade as Efecto } from "react-reveal";
+//import { Fade as Efecto } from "react-reveal";
 
 // Styled Components
 import { Nav, LinksContainerNav, TextLogoNav, LogoImg } from "../Navbar/NavbarElements.jsx"
@@ -54,7 +54,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade>Principal</Efecto></li>
+            <li>Principal</li>
           </LinkScroll>
           <LinkScroll
             to="cursos"
@@ -62,7 +62,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade duration={2000}>Portfolio</Efecto></li>
+            <li>Portfolio</li>
           </LinkScroll>
 
           <LinkScroll
@@ -71,7 +71,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade>Skills</Efecto></li>
+            <li>Skills</li>
           </LinkScroll>
 
           <LinkScroll
@@ -80,7 +80,7 @@ const Navbar = () => {
             duration={100}
             style={{ cursor: "pointer" }}
           >
-            <li><Efecto left cascade>Contact</Efecto></li>
+            <li>Contact</li>
           </LinkScroll>
         </ul>
       </LinksContainerNav>
