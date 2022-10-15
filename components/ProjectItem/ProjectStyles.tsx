@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
   margin-top: 2rem;
   overflow: hidden;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
