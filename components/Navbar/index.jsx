@@ -3,12 +3,10 @@ import styled from "styled-components";
 import Image from "next/image";
 import logo from "../../assets/Logo2.png";
 
-
 import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
 import { Link as LinkScroll } from "react-scroll";
 
-//import { Fade as Efecto } from "react-reveal";
 
 // Styled Components
 import { Nav, LinksContainerNav, TextLogoNav, LogoImg } from "../Navbar/NavbarElements.jsx"

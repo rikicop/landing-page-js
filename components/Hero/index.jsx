@@ -1,7 +1,6 @@
 
 import { Typewriter } from "react-simple-typewriter";
 import { useRouter } from "next/router";
-//import { Fade as Efecto } from "react-reveal";
 
 import {
   Container,
@@ -77,7 +76,7 @@ function Hero({
             <InfoColumn>
 
               <ImgWrapper start={start}>
-                <Efecto bottom cascade ><Img src={img} alt={alt} width={580} height={460} /></Efecto>
+                <Img src={img} alt={alt} width={580} height={460} />
               </ImgWrapper>
 
             </InfoColumn>

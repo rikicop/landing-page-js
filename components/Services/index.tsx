@@ -9,14 +9,13 @@ import {
 } from "./ServicesElements";
 
 import { GiTeacher, GiLightBulb, GiBrain } from "react-icons/gi";
-const Slide = require("react-reveal/Slide");
+
 
 
 const Services = () => {
   return (
     <>
-      <ServicesContainer id="servicios">
-        <Slide bottom cascade>
+      <ServicesContainer id="servicios">  
         <ServicesH1>Servicios</ServicesH1>
         <ServicesWrapper>
           <ServicesCard>
@@ -49,7 +48,6 @@ const Services = () => {
             </ServicesP>
           </ServicesCard>
         </ServicesWrapper>
-        </Slide>
       </ServicesContainer>
     </>
   );
