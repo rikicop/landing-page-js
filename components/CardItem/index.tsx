@@ -12,7 +12,7 @@ const CardItem = ({ data }: ArticleItemProps) => {
           <img src={data.mainImage} alt="post" />
         </div>
         <h3 className="card-title">{data.title}</h3>
-        <p className="card-excerpt">{data.excerpt}</p>
+        <p className="card-excerpt">{data.title}</p>
       </div>
       {/* In case you need to add authors... */}
       {/*  <div className="info-author">
