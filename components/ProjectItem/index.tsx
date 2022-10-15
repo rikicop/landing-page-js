@@ -33,7 +33,7 @@ const ProjectItem = ({ data }: ArticleItemProps) => {
         </div>
         <div className="btn-wrapper">
           <button className="btn-read" onClick={()=> router.push(data.vercel)}>DEMO</button>
-          <button className="btn-read" onClick={()=> router.push(data.github)}>CODE</button>
+          <button className="btn-read" onClick={()=> router.push(data.github)}>GITHUB</button>
         </div>
       </div>
     </CardContainer>
