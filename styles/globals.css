@@ -6,7 +6,9 @@
   /* Azul */
   /* --primary-color: #2e27ae;  */
   /* Amarillo */
-  --primary-color: #fedc2e; 
+  --primary-color:  #5eafe4; 
+  --secondary-color: #3691c6;
+  --tertiary-color: #2a2c69;
   --hr-color: #000000;
   --font-family: "Poppins", "Nunito";
 }

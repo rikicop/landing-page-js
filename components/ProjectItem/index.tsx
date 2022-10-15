@@ -1,33 +1,39 @@
-import { ArticleItemProps } from "../../Interfaces";
 import { CardContainer } from "./ProjectStyles";
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 //ICONS
 import { FaTools } from "react-icons/fa";
+import { ArticleItemProps } from "typings";
+import { urlFor } from "sanity";
 
 const ProjectItem = ({ data }: ArticleItemProps) => {
-  //const router = useRouter();
+  //console.log('Data: ' , data);
+  const router = useRouter();
   return (
-    <CardContainer /* onClick={() => router.push(`/curso/Slug/${data.slug.current}`)} */>
+    <CardContainer>
       <div className="card-head">
         <div className="image-wrapper">
-          <img src={data.mainImage} alt="curso" />
+          {data.mainImage && (
+            <img
+              src={urlFor(data.mainImage).url()!}
+              alt={data.title}
+            />
+          )}
         </div>
         <h3 className="card-title">{data.title}</h3>
-        <p className="card-excerpt">{data.title}</p>
-        
+        <p className="card-excerpt">{data.description}</p>   
       </div>
     
       <div className="footer-wrapper">
       
          <div className="more-info">
           <div className="promo">
-            <FaTools  style={{ color: '#fbaa18', width: '20px' }}/>
+            <FaTools  style={{ color: 'var(--primary-color)', width: '20px' }}/>
               <span style={{marginLeft:"4px"}}>{data.technologies}</span>      
           </div>
         </div>
         <div className="btn-wrapper">
-          <button className="btn-read">DEMO</button>
-          <button className="btn-read"> CODE</button>
+          <button className="btn-read" onClick={()=> router.push(data.vercel)}>DEMO</button>
+          <button className="btn-read" onClick={()=> router.push(data.github)}>CODE</button>
         </div>
       </div>
     </CardContainer>

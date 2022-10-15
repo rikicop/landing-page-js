@@ -8,19 +8,19 @@ export const Section = styled.footer`
   justify-content: space-around;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10vw;
-  padding: 4vw;
+  gap: 0vw;
+  padding: 1vw;
   margin-top: 2vw;
   text-align: justify;
   p {
     font-size: 1.1rem;
     line-height: 2rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0rem;
   }
   ul {
     display: flex;
     list-style-type: none;
-    gap: 4vw;
+    gap: 1vw;
     li {
       padding: 0.8rem;
       border-radius: 1.2rem;
@@ -37,7 +37,7 @@ export const Section = styled.footer`
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fbaa18;
+        color: var(--secondary-color);
         font-size: 1.6rem;
         transition: 0.2s ease-in-out;
         &:hover {
@@ -87,6 +87,9 @@ export const BrandContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+ @media screen and (max-width: 768px) {
+    padding-left: 15px;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -112,3 +115,9 @@ export const BrandName = styled.h1`
   text-transform: uppercase;
   padding: 1rem;
 `;
+
+export const Email = styled.p`
+  font-size: 1px;
+  font-weight: 100;
+  color: whitesmoke;
+`; 

@@ -1,8 +1,9 @@
 export interface Project {
-  mainImage: SanityImageSource;
   _id: string;
   _createdAt: string;
   title: string;
+  description: string;
+  mainImage: string;
   author: {
     name: string;
     image: string;
@@ -16,6 +17,37 @@ export interface Project {
   body:[object];
 
 }
+
+export interface IndexPageProps {
+  data: {
+    title: string;
+    description: string;
+    slug: string | any;
+    body: [object];
+    technologies: string;
+    mainImage: string;
+    github: string;
+    vercel: string;
+  }[];
+  title: string;
+}
+
+export interface ArticleItemProps {
+  data: {
+    slug: string | any;
+    title: string;
+    description: string;
+    technologies: string;
+    mainImage?: string | any;
+    body: [object];
+    github: string;
+    vercel: string;
+    authorPicture?: string | any;
+    author?: string;
+  };
+}
+
+
 
 export interface PostType {
   _id: string;

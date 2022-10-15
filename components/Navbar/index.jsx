@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets/Logo2.png";
 //import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 
 import { FaBars } from "react-icons/fa"

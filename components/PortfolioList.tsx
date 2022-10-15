@@ -1,5 +1,6 @@
-import { IndexPageProps } from "../Interfaces";
+
 import styled from "styled-components";
+import { IndexPageProps } from "typings";
 import ProjectItem from "./ProjectItem";
 //import styles from "../styles/Card.module.css";
 

@@ -1,5 +1,4 @@
 // MODULES
-//import imageUrlBuilder from "@sanity/image-url";
 //import { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 
@@ -16,7 +15,7 @@ import Navbar from "components/Navbar";
 import Features from "components/Features";
 import PortfolioList from "components/PortfolioList";
 //Sanity Client
-import { sanityClient,urlFor } from "sanity";
+import { sanityClient } from "sanity";
 import { Project } from "typings";
 
 // TYPES
@@ -25,7 +24,7 @@ interface Props {
 }
 
 export default function Home({projects}: Props) {
-  console.log(projects);
+  /* console.log(projects); */
  
 
   return (
@@ -37,7 +36,7 @@ export default function Home({projects}: Props) {
       <Features/>
     {/* <Services />*/}
     {/* Portfolio */}
-      {<PortfolioList data={projects} title="Cursos" />}
+      {<PortfolioList data={projects} title="Portfolio" />}
     {/*End Porfolio */}
     </>
   );
@@ -48,6 +47,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const query = `*[_type == "project"]{
   _id,
   title,
+  description,
+  mainImage,
   slug,
   body,
   technologies,

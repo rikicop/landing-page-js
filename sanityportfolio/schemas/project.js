@@ -9,6 +9,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'description',
+      description: 'A short description of the project',
+      title: 'Description',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -26,6 +32,7 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
+      description: 'Be careful with the image size.',
       type: 'image',
       options: {
         hotspot: true,

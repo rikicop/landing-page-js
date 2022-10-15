@@ -8,19 +8,13 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
   background-color: white;
   &:hover {
     transform: scale(1.03);
   }
-  &:hover  .footer-wrapper .btn-wrapper .btn-read {
-    background: #fbaa18;
-    border: 2px solid #f7e30f;
-    color: black;
-  }
-
+ 
   .card-head {
     .image-wrapper {
       padding: 1rem 1rem 0rem 1rem;
@@ -30,11 +24,11 @@ export const CardContainer = styled.div`
       }
     }
     .card-title {
-      color: #fbaa18;
+      color: var(--secondary-color);
       margin: 0 1rem;
     }
     .card-excerpt {
-      color: #6c757d;
+      color: var(--tertiary-color);
       padding: 0 1rem;
     }
   }
@@ -65,11 +59,18 @@ export const CardContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
         margin: 1rem;
-        border: 2px solid #faa302;
+        border: 2px solid  var(--tertiary-color);
         background: transparent;
-        color: #fbaa18;
+        color: var(--secondary-color);
+        cursor: pointer;
         border-radius: 1rem;
         transition: background 200ms ease-in, color 200ms ease-in;
+        &:hover {
+          background: var(--secondary-color);
+          border: 0.5px solid var(--primary-color);
+          color: black;
+        }
+
     }
   }
     

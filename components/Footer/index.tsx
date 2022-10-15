@@ -1,15 +1,14 @@
 import React from "react";
-//import logo_text from "../../assets/Recurso 7@4x.png";
-//import Image from "next/image";
-
 // icons 
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-
+import { FaGithub,FaLinkedin } from "react-icons/fa";
 // styled components
-import { LowerFooter, Section, BrandContainer, ContactContainer, Title, BrandName } from "./FooterElements";
+import { LowerFooter, Section, BrandContainer, ContactContainer, Title, BrandName,Email } from "./FooterElements";
+// router
+import { useRouter } from "next/router";
 
 export default function Footer() {
   
+  const router = useRouter();
 
   return (
    <>
@@ -19,10 +18,10 @@ export default function Footer() {
           <Image src={logo_text} className="img_logo" alt="Footer Logo" height={50} width={200} />
         </ImgContainer>
 
- */}    <BrandName> RICARDO OTÁLORA LUNA</BrandName>
+ */}    <BrandName>RICARDO OTÁLORA</BrandName>
         <ul>
-          <li><FaFacebook/></li>
-          <li><FaInstagram/></li>
+          <li><FaGithub onClick={() =>  router.push('https://github.com/rikicop')}/></li>
+          <li><FaLinkedin onClick={()=> router.push('https://www.linkedin.com/in/ricardo-otalora-luna/') }/></li>
         </ul>
 
       </BrandContainer>  
@@ -41,7 +40,7 @@ export default function Footer() {
         </Title>
 
         <p>+57 320 957 3682</p>
-        <p>rikotalora@gmail.com</p>
+        <Email>rikotalora@gmail.com</Email>
 
       </ContactContainer>
 

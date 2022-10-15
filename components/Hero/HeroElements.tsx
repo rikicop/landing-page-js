@@ -13,7 +13,9 @@ export const Container = styled.div`
     padding-right: 4px;
     padding-left: 20px;
   }
- 
+ @media screen and (max-width: 768px) {
+    max-height: 200px;
+  } 
 `;
 
 type InfoSecProps = {
@@ -24,6 +26,10 @@ export const InfoSec = styled.div<InfoSecProps>`
   color: #fff;
   padding: 160px 0;
   background: ${(props) => (props.lightBg ? "transparent" : "#1d1d1d")};
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 195px;
+  }
 `;
 
 type InfoRowProps = {
@@ -72,6 +78,9 @@ export const ImgWrapper = styled.div<ImgWrapperProps>`
   max-width: 555px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 type TopLineProps = {
@@ -79,7 +88,7 @@ type TopLineProps = {
 };
 
 export const TopLine = styled.div<TopLineProps>`
-  color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : "#4B59F7")};
+  color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : " #5eafe4")};
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
@@ -94,6 +103,9 @@ export const Img = styled(Image)`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 type HeadingProps = {
@@ -132,7 +144,7 @@ type ButtonProps = {
 
 export const Button = styled.button<ButtonProps>`
   border-radius: 4px;
-  background: ${({ primary }) => (primary ? "#4B59F7" : "#0467FB")};
+  background: ${({ primary }) => (primary ? "#3691c6" : "#5eafe4")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: #fff;
@@ -144,7 +156,7 @@ export const Button = styled.button<ButtonProps>`
   &:hover {
     transition: all 0.3s ease-out;
     background: #fff;
-    background-color: ${({ primary }) => (primary ? "#0467FB" : "#4B59F7")};
+    background-color: ${({ primary }) => (primary ? "#5eafe4" : "#3691c6")};
   }
   @media screen and (max-width: 960px) {
     width: 100%;
