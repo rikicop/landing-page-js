@@ -1,7 +1,7 @@
 import { IndexPageProps } from "../Interfaces";
-//import styles from "../styles/Card.module.css";
 import styled from "styled-components";
-import CursoItem from "./CursoItem";
+import ProjectItem from "./ProjectItem";
+//import styles from "../styles/Card.module.css";
 
 
 
@@ -44,7 +44,7 @@ const Title = styled.h1`
   color: black;
 `;
 
-const CursoList = ({ data, title }: IndexPageProps) => {
+const PortfolioList = ({ data, title }: IndexPageProps) => {
   return (
     <section id="cursos">
       <FeatureTextWrapper>
@@ -52,11 +52,11 @@ const CursoList = ({ data, title }: IndexPageProps) => {
       </FeatureTextWrapper>
       <Wrapper>
         {data.map((article, index) => (
-          <CursoItem data={article} key={index} />
+          <ProjectItem data={article} key={index} />
         ))}
       </Wrapper>
     </section>
   );
 };
 
-export default CursoList;
+export default PortfolioList;

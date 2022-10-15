@@ -11,9 +11,10 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Acerca from "../components/Acerca";
-//import CardList from "../components/CardList"; este es el blog, por ahora, no se va a utilizar
 import Navbar from "components/Navbar";
-import CursoList from "components/CursoList";
+import PortfolioList from "components/PortfolioList";
+//import CardList from "../components/CardList"; este es el blog, por ahora, no se va a utilizar
+
 
 
 
@@ -62,7 +63,7 @@ export default function Home({ posts: posts, cursos: cursos }: any) {
       <Services />
        {/* Cursos */}
       {mappedCursos.length ? (
-        <CursoList data={mappedCursos} title="Curso" />
+        <PortfolioList data={mappedCursos} title="Curso" />
       ) : (
         <p>No Courses found</p>
       )}

@@ -65,7 +65,7 @@ export const CardContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
         margin: 1rem;
-        border: 2px solid #000000;
+        border: 2px solid #faa302;
         background: transparent;
         color: #fbaa18;
         border-radius: 1rem;

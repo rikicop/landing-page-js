@@ -1,10 +1,9 @@
 export interface IndexPageProps {
   data: {
-    id: string;
     title: string;
     slug: string | any;
-    body: string;
-    excerpt: string;
+    body: [object];
+    technologies: string;
     mainImage: string | any;
   }[];
   title: string;
@@ -26,13 +25,12 @@ export interface ArticleProps {
 
 export interface ArticleItemProps {
   data: {
-    id: string;
     slug: string | any;
     title: string;
+    technologies: string;
     picture?: string | any;
     mainImage?: string | any;
-    body: string;
-    excerpt: string;
+    body: [object];
     authorPicture?: string | any;
     author?: string;
   };

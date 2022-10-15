@@ -1,3 +1,22 @@
+export interface Project {
+  mainImage: SanityImageSource;
+  _id: string;
+  _createdAt: string;
+  title: string;
+  author: {
+    name: string;
+    image: string;
+  };
+  technologies: string;
+  vercel: string;
+  github: string;
+  slug:{
+    current: string;
+  };
+  body:[object];
+
+}
+
 export interface PostType {
   _id: string;
   _createdAt: string;
