@@ -27,7 +27,7 @@ const Navbar = () => {
         </LogoImg>
 
         <TextLogoNav>
-          Ricardo Otálora
+          Ricardo Otalora
         </TextLogoNav>
 
         <div className="toggle">
