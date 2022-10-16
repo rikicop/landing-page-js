@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../../assets/Logo2.png";
+import logo from "../../assets/logo.png";
 
 import { FaBars } from "react-icons/fa"
 import { CgClose } from "react-icons/cg"
