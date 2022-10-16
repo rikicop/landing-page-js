@@ -5,7 +5,7 @@ import Image from "next/image";
 const Meta = () => {
   return (
     <Head>
-      <link rel="shortcut icon" href="/images/logo2.png" />
+      <link rel="shortcut icon" href="/images/logo.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <meta
