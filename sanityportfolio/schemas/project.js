@@ -55,10 +55,12 @@ export default {
     },
     {
       name: 'video',
+      description: 'Enlaces para videos',
       title: 'Video',
       type: 'string',
     }
-    , {
+    ,
+    {
       name: 'vercel',
       title: 'Vercel',
       type: 'string',
