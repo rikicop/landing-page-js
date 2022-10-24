@@ -54,6 +54,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'video',
+      title: 'Video',
+      type: 'string',
+    }
+    , {
       name: 'vercel',
       title: 'Vercel',
       type: 'string',
